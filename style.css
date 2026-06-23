@@ -55,8 +55,8 @@ body {
 .hero {
   min-height: calc(100vh - 76px);
   display: grid;
-  place-items: center;
-  padding: clamp(72px, 10vh, 120px) 24px clamp(88px, 12vh, 144px);
+  place-items: start center;
+  padding: clamp(36px, 6vh, 72px) 24px clamp(64px, 8vh, 108px);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -84,6 +84,7 @@ body {
   position: relative;
   z-index: 2;
   max-width: 920px;
+  margin-top: clamp(8px, 3vh, 42px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,9 +92,9 @@ body {
 
 .hero-logo {
   display: block;
-  width: min(700px, 90vw);
+  width: min(620px, 86vw);
   height: auto;
-  margin: 0 auto clamp(26px, 4vh, 46px);
+  margin: 0 auto clamp(16px, 2.4vh, 30px);
   padding: 0;
   border: 0;
   background: transparent;
@@ -119,15 +120,15 @@ h1 {
 }
 
 .hero h1 + .eyebrow {
-  margin: 22px 0 0;
+  margin: 16px 0 0;
 }
 
 .hero-text {
   max-width: 720px;
-  margin: 24px auto 38px;
+  margin: 16px auto 28px;
   color: #d8cfc3;
-  font-size: clamp(18px, 2vw, 22px);
-  line-height: 1.55;
+  font-size: clamp(17px, 1.8vw, 21px);
+  line-height: 1.45;
 }
 
 .button {
@@ -282,7 +283,7 @@ footer img {
 .card-hell {
   background:
     linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.92)),
-    url("assets/forty-minutes/nolan-sideline.jpg") 32% center / cover no-repeat;
+    url("assets/forty-minutes/nolan-sideline.jpg?v=2") 32% center / cover no-repeat;
 }
 
 .card span {
@@ -627,7 +628,7 @@ footer img {
     linear-gradient(90deg, rgba(5,3,4,.96) 0%, rgba(5,3,4,.64) 48%, rgba(5,3,4,.86) 100%),
     linear-gradient(0deg, #050304 0%, rgba(5,3,4,.18) 46%, rgba(5,3,4,.24) 100%),
     radial-gradient(circle at 72% 28%, rgba(255,38,61,.36), transparent 28%),
-    url("assets/forty-minutes/nolan-sideline.jpg") center / cover no-repeat,
+    url("assets/forty-minutes/nolan-sideline.jpg?v=2") center / cover no-repeat,
     #050304;
 }
 
@@ -840,7 +841,7 @@ footer img {
   overflow: hidden;
   background:
     linear-gradient(0deg, rgba(5,3,4,.32), rgba(5,3,4,.04)),
-    url("assets/forty-minutes/poster.jpg") center / cover no-repeat,
+    url("assets/forty-minutes/poster.jpg?v=2") center / cover no-repeat,
     #170507;
   box-shadow: 0 36px 90px rgba(0,0,0,.72);
 }
