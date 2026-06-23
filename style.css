@@ -326,6 +326,12 @@ footer img {
     url("assets/forty-minutes/nolan-sideline.jpg?v=2") 32% center / cover no-repeat;
 }
 
+.card-loren {
+  background:
+    linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.94)),
+    url("assets/finding-loren/poster.jpg") center 32% / cover no-repeat;
+}
+
 .card span {
   margin-top: 24px;
   color: #d8cfc3;
@@ -1206,6 +1212,86 @@ footer img {
 .hell-page .project-next { background: radial-gradient(circle at 50% 100%, rgba(255,38,61,.22), transparent 48%); }
 .hell-page .project-next a span, .hell-page .project-next a:hover { color: var(--hell-hot); }
 
+.loren-page { --loren-gold: #d5a75f; --loren-cream: #f3e3c2; --loren-olive: #343323; background: #070604; }
+.loren-page .eyebrow { color: var(--loren-gold); }
+.loren-page .text-link:hover { color: var(--loren-gold); }
+.loren-button { border-color: var(--loren-gold); color: var(--loren-gold); }
+.loren-button:hover { background: var(--loren-gold); color: #070604; }
+
+.loren-hero {
+  min-height: calc(100vh - 76px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, .72fr);
+  gap: clamp(36px, 6vw, 90px);
+  align-items: center;
+  padding: clamp(72px, 10vw, 140px) 30px;
+  background:
+    linear-gradient(90deg, rgba(7,6,4,.94), rgba(7,6,4,.62)),
+    radial-gradient(circle at 78% 28%, rgba(213,167,95,.23), transparent 32%),
+    url("assets/finding-loren/map-synopsis.jpg") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.loren-hero-copy { max-width: 850px; justify-self: end; }
+.loren-hero h1 { font-family: Arial, Helvetica, sans-serif; font-size: clamp(72px, 12vw, 168px); font-weight: 950; line-height: .78; letter-spacing: -.075em; text-transform: uppercase; }
+.loren-hero-copy > p:not(.eyebrow) { max-width: 680px; margin: 30px 0 0; color: #e6d7bd; font-family: Georgia, "Times New Roman", serif; font-size: clamp(23px, 3vw, 38px); line-height: 1.25; }
+.loren-poster img { display: block; width: min(100%, 520px); box-shadow: 0 36px 95px rgba(0,0,0,.72); }
+
+.loren-section { max-width: 1320px; margin: 0 auto; padding: clamp(78px, 10vw, 140px) 30px; }
+.loren-story { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(54px, 8vw, 120px); border-bottom: 1px solid rgba(255,255,255,.08); }
+.loren-story .lead { margin: 0 0 30px; color: var(--loren-cream); font-family: Georgia, "Times New Roman", serif; font-size: clamp(29px, 4vw, 48px); line-height: 1.18; }
+.loren-story p:not(.eyebrow):not(.lead),
+.loren-image-copy p,
+.loren-doc-copy p,
+.loren-comps p,
+.loren-writer-copy p { color: #beb29f; font-size: 18px; line-height: 1.75; }
+
+.loren-image-split {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  background: #11100b;
+  border-bottom: 1px solid rgba(213,167,95,.2);
+}
+
+.loren-map-image img { display: block; width: 100%; height: 100%; min-height: 560px; object-fit: cover; filter: saturate(.88) contrast(1.04); }
+.loren-image-copy { padding: clamp(54px, 7vw, 110px); display: flex; flex-direction: column; justify-content: center; }
+
+.loren-documentary { display: grid; grid-template-columns: .92fr 1.08fr; gap: clamp(54px, 8vw, 120px); align-items: center; }
+.loren-doc-image { position: relative; }
+.loren-doc-image::after { content: ""; position: absolute; inset: 8% -7% -7% 10%; z-index: -1; border: 1px solid rgba(213,167,95,.5); }
+.loren-doc-image img { display: block; width: 100%; filter: sepia(.16) saturate(.72) contrast(1.06); }
+.loren-doc-copy h2,
+.loren-writer-copy h2 { margin-bottom: 28px; }
+
+.loren-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 46px; }
+.loren-section-heading h2 { margin: 0; max-width: 900px; }
+.loren-press-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(213,167,95,.3); border-left: 1px solid rgba(213,167,95,.3); }
+.loren-press-grid a { min-height: 270px; padding: 26px; display: flex; flex-direction: column; justify-content: space-between; color: inherit; text-decoration: none; border-right: 1px solid rgba(213,167,95,.3); border-bottom: 1px solid rgba(213,167,95,.3); background: linear-gradient(145deg, rgba(213,167,95,.1), transparent 58%); }
+.loren-press-grid a:hover { background: rgba(213,167,95,.14); }
+.loren-press-grid span { color: var(--loren-gold); text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 900; }
+.loren-press-grid p { margin: 70px 0 0; color: var(--loren-cream); font-family: Georgia, "Times New Roman", serif; font-size: 24px; line-height: 1.18; }
+
+.loren-comps {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  align-items: center;
+  gap: clamp(38px, 6vw, 90px);
+  padding: clamp(60px, 8vw, 110px) 30px;
+  background: #0c0a07;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.loren-comps img { display: block; width: 100%; box-shadow: 0 30px 80px rgba(0,0,0,.55); }
+.loren-writer { display: grid; grid-template-columns: minmax(260px, .55fr) minmax(0, 1.45fr); gap: clamp(54px, 8vw, 120px); align-items: center; }
+.loren-writer-photo img { display: block; width: 100%; max-width: 420px; filter: sepia(.2) saturate(.8) contrast(1.05); }
+.loren-page .project-next { background: radial-gradient(circle at 50% 100%, rgba(213,167,95,.2), transparent 48%); }
+.loren-page .project-next a span, .loren-page .project-next a:hover { color: var(--loren-gold); }
+
 footer p {
   margin: 8px 0;
   color: #aaa;
@@ -1318,6 +1404,11 @@ footer a {
   .hell-section-heading { display: block; }
   .hell-section-heading .eyebrow { margin-bottom: 18px; }
   .hell-character-grid, .hell-production dl { grid-template-columns: 1fr 1fr; }
+  .loren-hero, .loren-story, .loren-image-split, .loren-documentary, .loren-comps, .loren-writer { grid-template-columns: 1fr; }
+  .loren-hero-copy { justify-self: start; }
+  .loren-poster img { max-width: 460px; }
+  .loren-press-grid { grid-template-columns: 1fr 1fr; }
+  .loren-map-image img { min-height: 360px; }
 }
 
 @media (max-width: 560px) {
@@ -1351,4 +1442,9 @@ footer a {
   .hell-poster-card { min-height: 460px; }
   .hell-character-grid, .hell-production dl { grid-template-columns: 1fr; }
   .hell-character-grid article { min-height: 230px; }
+  .loren-hero h1 { font-size: clamp(62px, 20vw, 100px); }
+  .loren-press-grid { grid-template-columns: 1fr; }
+  .loren-press-grid a { min-height: 220px; }
+  .loren-section-heading { display: block; }
+  .loren-section-heading .eyebrow { margin-bottom: 18px; }
 }
