@@ -575,6 +575,38 @@ footer a {
   color: #ff5a1f;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-links a {
+  min-width: 132px;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,90,31,.55);
+  border-radius: 999px;
+  color: #f7efe6;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 900;
+  background: rgba(255,90,31,.06);
+  box-shadow: 0 0 24px rgba(255,90,31,.08);
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  border-color: #ff5a1f;
+  background: #ff5a1f;
+  color: #030303;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 850px) {
   .nav {
     padding: 12px 18px;
