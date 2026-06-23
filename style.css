@@ -256,6 +256,35 @@ h2 {
   font-weight: 900;
 }
 
+.credit-card {
+  gap: 20px;
+}
+
+.credit-card img {
+  display: block;
+  width: 100%;
+  height: 132px;
+  object-fit: cover;
+  border: 1px solid rgba(255,90,31,.35);
+  box-shadow: 0 22px 50px rgba(0,0,0,.34);
+  filter: saturate(.94) contrast(1.04);
+}
+
+.credit-card-poster img {
+  width: 96px;
+  height: 138px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.credit-card-logo img {
+  height: 104px;
+  padding: 26px 18px;
+  object-fit: contain;
+  background: #fff;
+  filter: none;
+}
+
 .credits-grid p {
   margin: 0;
   color: #f7efe6;
