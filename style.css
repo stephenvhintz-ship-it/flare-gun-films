@@ -461,11 +461,49 @@ footer img {
 .crow-section { max-width: 1340px; margin: 0 auto; padding: clamp(76px, 10vw, 140px) 30px; }
 .crow-section-title { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 48px; }
 .crow-section-title h2 { margin: 0; }
-.canva-frame { position: relative; min-height: min(76vw, 780px); background: radial-gradient(circle at center, rgba(66,183,233,.13), transparent 48%), #0a0d13; border: 1px solid rgba(66,183,233,.35); box-shadow: 0 30px 110px rgba(0,0,0,.8); }
-.canva-frame iframe { position: absolute; inset: 0; z-index: 2; width: 100%; height: 100%; border: 0; background: transparent; }
-.canva-fallback { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 22px; background: rgba(5,7,11,.94); border-top: 1px solid rgba(66,183,233,.28); }
-.canva-fallback p { margin: 0; color: #9ca3ae; font-size: 13px; }
-.canva-fallback .button { flex: 0 0 auto; padding: 11px 18px; }
+.crow-canva-player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(66,183,233,.35);
+  background:
+    radial-gradient(circle at center, rgba(66,183,233,.13), transparent 48%),
+    url("assets/crow-flies/art-scene.jpg") center / cover no-repeat,
+    #0a0d13;
+  box-shadow: 0 30px 110px rgba(0,0,0,.8);
+  overflow: hidden;
+}
+
+.crow-canva-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.crow-embed-note {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 22px;
+  border: 1px solid rgba(66,183,233,.24);
+  background: rgba(5,7,11,.82);
+}
+
+.crow-embed-note p {
+  margin: 0;
+  color: #aeb4bd;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.crow-embed-note .button {
+  flex: 0 0 auto;
+  padding: 11px 18px;
+}
 
 .crow-story { display: grid; grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr); gap: clamp(60px, 10vw, 140px); align-items: center; border-top: 1px solid rgba(255,255,255,.08); }
 .crow-book-stack { min-height: 660px; position: relative; }
@@ -1208,6 +1246,7 @@ footer a {
   .crow-world-copy { padding: 70px 30px; }
   .crow-scenes { grid-template-columns: 1fr; }
   .crow-world-build { margin: 0 20px 90px; }
+  .crow-embed-note { align-items: stretch; flex-direction: column; }
   .sidd-story, .sidd-passage, .sidd-director { grid-template-columns: 1fr; }
   .sidd-story-intro { position: static; }
   .sidd-dual-worlds { grid-template-columns: 1fr; }
@@ -1242,8 +1281,6 @@ footer a {
   .crow-hero h1 { font-size: clamp(64px, 22vw, 102px); }
   .crow-section-title { display: block; }
   .crow-section-title .eyebrow { margin-bottom: 18px; }
-  .canva-frame { min-height: 72vh; }
-  .canva-fallback { align-items: stretch; flex-direction: column; }
   .crow-book-stack { min-height: 540px; }
   .crow-world-build > div { position: relative; left: auto; bottom: auto; max-width: none; }
   .sidd-page .nav nav a:nth-child(3) { display: none; }
