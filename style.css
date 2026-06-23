@@ -279,6 +279,15 @@ footer img {
     url("assets/sidd/los-misterios.jpg") center / cover no-repeat;
 }
 
+.card-hell {
+  background:
+    linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.92)),
+    radial-gradient(circle at 82% 18%, rgba(180,0,20,.75), transparent 24%),
+    linear-gradient(115deg, transparent 0 44%, rgba(255,255,255,.16) 44.25% 44.65%, transparent 44.9%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, transparent 1px 36px),
+    #120407;
+}
+
 .card span {
   margin-top: 24px;
   color: #d8cfc3;
@@ -567,6 +576,468 @@ footer img {
 .sidd-page .project-next { background: radial-gradient(circle at 50% 100%, rgba(214,168,76,.2), transparent 48%); }
 .sidd-page .project-next a span, .sidd-page .project-next a:hover { color: var(--sidd-gold); }
 
+.hell-page { --hell-red: #b90018; --hell-hot: #ff263d; --hell-wood: #c77a38; --hell-cream: #f5eadc; background: #050304; }
+.hell-page .eyebrow { color: var(--hell-hot); }
+.hell-page .text-link:hover { color: var(--hell-hot); }
+.hell-button { border-color: var(--hell-hot); color: var(--hell-hot); }
+.hell-button:hover { background: var(--hell-hot); color: #050304; }
+
+.hell-hero {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(5,3,4,.96) 0%, rgba(5,3,4,.64) 48%, rgba(5,3,4,.86) 100%),
+    radial-gradient(circle at 72% 28%, rgba(255,38,61,.36), transparent 28%),
+    linear-gradient(120deg, rgba(199,122,56,.18), transparent 48%),
+    #050304;
+}
+
+.hell-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent 0 49.7%, rgba(255,255,255,.18) 49.7% 50.3%, transparent 50.3%),
+    linear-gradient(0deg, transparent 0 49.7%, rgba(255,255,255,.14) 49.7% 50.3%, transparent 50.3%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 72px);
+  opacity: .34;
+  transform: perspective(900px) rotateX(62deg) scale(1.35);
+  transform-origin: 50% 100%;
+}
+
+.hell-hero::after {
+  content: "";
+  position: absolute;
+  width: min(78vw, 1100px);
+  aspect-ratio: 1;
+  right: -26%;
+  bottom: -44%;
+  border: 2px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  box-shadow: inset 0 0 70px rgba(255,38,61,.16), 0 0 120px rgba(255,38,61,.12);
+}
+
+.hell-court-lines {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 70% 42%, transparent 0 90px, rgba(255,255,255,.13) 91px 93px, transparent 94px),
+    linear-gradient(116deg, transparent 0 58%, rgba(255,255,255,.12) 58.15% 58.45%, transparent 58.6%),
+    linear-gradient(64deg, transparent 0 56%, rgba(255,255,255,.09) 56.15% 56.45%, transparent 56.6%);
+  opacity: .8;
+}
+
+.hell-scoreboard {
+  position: absolute;
+  top: clamp(110px, 14vw, 170px);
+  right: clamp(24px, 8vw, 118px);
+  z-index: 2;
+  width: min(280px, 38vw);
+  padding: 24px;
+  border: 1px solid rgba(255,38,61,.42);
+  background: rgba(6,3,4,.72);
+  box-shadow: 0 0 70px rgba(255,38,61,.16);
+}
+
+.hell-scoreboard span {
+  display: block;
+  color: var(--hell-hot);
+  font-family: "Courier New", monospace;
+  font-size: clamp(38px, 6vw, 76px);
+  font-weight: 900;
+  letter-spacing: -.08em;
+  line-height: .82;
+  text-shadow: 0 0 24px rgba(255,38,61,.65);
+}
+
+.hell-scoreboard small {
+  display: block;
+  margin-top: 14px;
+  color: #bfb3aa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.hell-hero-copy {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 124px 30px 92px;
+  position: relative;
+  z-index: 3;
+}
+
+.hell-hero h1 {
+  max-width: 1080px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(62px, 11vw, 156px);
+  font-weight: 950;
+  line-height: .78;
+  letter-spacing: -.075em;
+  text-transform: uppercase;
+}
+
+.hell-hero h1 span {
+  display: block;
+  color: var(--hell-hot);
+  font-size: 1.23em;
+  text-shadow: 0 0 48px rgba(255,38,61,.38);
+}
+
+.hell-hero-copy > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 30px 0 0;
+  color: #d9cfc4;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.34;
+}
+
+.hell-quote {
+  padding: clamp(56px, 8vw, 96px) 28px;
+  text-align: center;
+  border-top: 1px solid rgba(255,38,61,.2);
+  border-bottom: 1px solid rgba(255,38,61,.2);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,38,61,.18), transparent 45%),
+    #080405;
+}
+
+.hell-quote blockquote {
+  max-width: 980px;
+  margin: 0 auto;
+  color: var(--hell-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 4vw, 54px);
+  line-height: 1.15;
+}
+
+.hell-quote p {
+  margin: 24px 0 0;
+  color: var(--hell-hot);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.hell-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(78px, 10vw, 140px) 30px;
+}
+
+.hell-intro {
+  display: grid;
+  grid-template-columns: .86fr 1.14fr;
+  gap: clamp(54px, 8vw, 120px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.hell-intro .lead,
+.hell-story-copy .lead {
+  margin: 0 0 30px;
+  color: var(--hell-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 4vw, 48px);
+  line-height: 1.18;
+}
+
+.hell-intro p:not(.eyebrow):not(.lead),
+.hell-story-copy > p:not(.eyebrow):not(.lead),
+.hell-impact p {
+  color: #b9afa6;
+  font-size: 18px;
+  line-height: 1.76;
+}
+
+.hell-rule-strip {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255,38,61,.28);
+  border-bottom: 1px solid rgba(255,38,61,.28);
+  background: linear-gradient(90deg, rgba(185,0,24,.18), transparent 52%, rgba(185,0,24,.12));
+}
+
+.hell-rule-strip article {
+  min-height: 300px;
+  padding: clamp(28px, 4vw, 52px);
+  border-right: 1px solid rgba(255,38,61,.22);
+}
+
+.hell-rule-strip article:last-child { border-right: 0; }
+.hell-rule-strip span { color: var(--hell-hot); font-family: "Courier New", monospace; font-size: 13px; font-weight: 900; }
+.hell-rule-strip h3 { margin: 90px 0 18px; color: white; font-size: clamp(34px, 5vw, 58px); line-height: .9; text-transform: uppercase; }
+.hell-rule-strip p { color: #b9afa6; line-height: 1.65; }
+
+.hell-story {
+  display: grid;
+  grid-template-columns: minmax(280px, .75fr) minmax(0, 1.25fr);
+  gap: clamp(60px, 9vw, 130px);
+  align-items: center;
+}
+
+.hell-poster-card {
+  min-height: 620px;
+  display: grid;
+  place-items: end start;
+  padding: 34px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(0deg, rgba(5,3,4,.94), rgba(5,3,4,.16)),
+    radial-gradient(circle at 66% 28%, rgba(255,38,61,.7), transparent 22%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 42px),
+    linear-gradient(120deg, rgba(199,122,56,.25), transparent 48%),
+    #170507;
+  box-shadow: 0 36px 90px rgba(0,0,0,.72);
+}
+
+.hell-poster-card::before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 2px solid rgba(255,255,255,.18);
+  border-radius: 50%;
+}
+
+.hell-poster-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(112deg, transparent 0 49%, rgba(255,255,255,.17) 49.15% 49.55%, transparent 49.7%);
+}
+
+.hell-poster-card div { position: relative; z-index: 2; }
+.hell-poster-card p { margin: 0 0 20px; color: var(--hell-hot); text-transform: uppercase; letter-spacing: 3px; font-size: 11px; font-weight: 900; }
+.hell-poster-card h2 { margin: 0; color: white; font-size: clamp(118px, 18vw, 230px); line-height: .72; letter-spacing: -.1em; }
+.hell-poster-card span { color: var(--hell-cream); text-transform: uppercase; letter-spacing: 4px; font-size: 13px; font-weight: 900; }
+
+.hell-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 42px 0 0;
+  border-top: 1px solid rgba(255,38,61,.28);
+  border-left: 1px solid rgba(255,38,61,.28);
+}
+
+.hell-meta div { padding: 18px; border-right: 1px solid rgba(255,38,61,.28); border-bottom: 1px solid rgba(255,38,61,.28); }
+.hell-meta dt { color: var(--hell-hot); text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: 900; }
+.hell-meta dd { margin: 8px 0 0; color: var(--hell-cream); }
+
+.hell-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 46px;
+}
+
+.hell-section-heading h2 { margin: 0; max-width: 900px; }
+
+.hell-character-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,38,61,.28);
+  border-left: 1px solid rgba(255,38,61,.28);
+}
+
+.hell-character-grid article {
+  min-height: 280px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px solid rgba(255,38,61,.28);
+  border-bottom: 1px solid rgba(255,38,61,.28);
+  background:
+    linear-gradient(145deg, rgba(255,38,61,.12), transparent 58%),
+    #0a0506;
+}
+
+.hell-character-grid span {
+  color: var(--hell-cream);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.hell-character-grid p {
+  color: #b9afa6;
+  line-height: 1.62;
+  margin-bottom: 0;
+}
+
+.hell-impact {
+  min-height: 640px;
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(0deg, rgba(5,3,4,.96) 0%, rgba(5,3,4,.52) 65%, rgba(5,3,4,.9) 100%),
+    radial-gradient(circle at 50% 0%, rgba(255,38,61,.34), transparent 36%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 70px),
+    #0b0505;
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.hell-impact > div {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: clamp(72px, 10vw, 130px) 30px;
+}
+
+.hell-impact h2 { max-width: 900px; }
+.hell-impact p { max-width: 720px; }
+
+.hell-package {
+  display: grid;
+  grid-template-columns: .78fr 1.22fr;
+  gap: clamp(54px, 8vw, 120px);
+  align-items: start;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.hell-package-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.hell-package-grid article {
+  padding: 28px;
+  border: 1px solid rgba(255,38,61,.25);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255,38,61,.16), transparent 42%),
+    #0b0506;
+}
+
+.hell-package-grid h3 {
+  margin: 0 0 14px;
+  color: var(--hell-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+}
+
+.hell-package-grid p {
+  margin: 0;
+  color: #b9afa6;
+  line-height: 1.65;
+}
+
+.hell-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.hell-cards article {
+  min-height: 300px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255,38,61,.25);
+  background: linear-gradient(145deg, rgba(185,0,24,.17), transparent 58%), #0c0607;
+}
+
+.hell-cards h3 {
+  margin: 0;
+  color: var(--hell-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.hell-production {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: clamp(54px, 8vw, 110px);
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.hell-production-copy p:not(.eyebrow) {
+  color: #b9afa6;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.hell-production dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  border-top: 1px solid rgba(255,38,61,.28);
+  border-left: 1px solid rgba(255,38,61,.28);
+}
+
+.hell-production dl div {
+  min-height: 124px;
+  padding: 22px;
+  border-right: 1px solid rgba(255,38,61,.28);
+  border-bottom: 1px solid rgba(255,38,61,.28);
+  background: linear-gradient(145deg, rgba(199,122,56,.08), transparent 60%);
+}
+
+.hell-production dt {
+  color: var(--hell-hot);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.hell-production dd {
+  margin: 20px 0 0;
+  color: var(--hell-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.1;
+}
+
+.hell-comps {
+  padding: clamp(72px, 10vw, 126px) 28px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(5,3,4,.74), rgba(5,3,4,.92)),
+    radial-gradient(circle at 50% 55%, rgba(255,38,61,.22), transparent 42%),
+    #090506;
+  border-top: 1px solid rgba(255,38,61,.2);
+  border-bottom: 1px solid rgba(255,38,61,.2);
+}
+
+.hell-comps h2 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hell-comps p:last-child {
+  max-width: 860px;
+  margin: 0 auto;
+  color: #b9afa6;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  line-height: 1.9;
+  font-weight: 900;
+}
+
+.hell-page .project-next { background: radial-gradient(circle at 50% 100%, rgba(255,38,61,.22), transparent 48%); }
+.hell-page .project-next a span, .hell-page .project-next a:hover { color: var(--hell-hot); }
+
 footer p {
   color: #aaa;
 }
@@ -653,6 +1124,17 @@ footer a {
   .sidd-dual-worlds { grid-template-columns: 1fr; }
   .character-grid { grid-template-columns: 1fr 1fr; }
   .writer-grid { grid-template-columns: 1fr; }
+  .hell-intro, .hell-story, .hell-package, .hell-production { grid-template-columns: 1fr; }
+  .hell-scoreboard { width: min(240px, 46vw); right: 22px; }
+  .hell-rule-strip, .hell-cards { grid-template-columns: 1fr; }
+  .hell-rule-strip article { min-height: 240px; border-right: 0; border-bottom: 1px solid rgba(255,38,61,.22); }
+  .hell-rule-strip article:last-child { border-bottom: 0; }
+  .hell-rule-strip h3 { margin-top: 58px; }
+  .hell-poster-card { min-height: 540px; max-width: 560px; }
+  .hell-meta { grid-template-columns: 1fr; }
+  .hell-section-heading { display: block; }
+  .hell-section-heading .eyebrow { margin-bottom: 18px; }
+  .hell-character-grid, .hell-production dl { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -679,4 +1161,14 @@ footer a {
   .character-grid { grid-template-columns: 1fr; }
   .writer-grid article { grid-template-columns: 1fr; }
   .writer-grid img { height: 380px; }
+  .hell-page .nav nav a:nth-child(3) { display: none; }
+  .hell-scoreboard { position: relative; top: auto; right: auto; width: auto; margin: 110px 22px 0; }
+  .hell-hero { display: block; }
+  .hell-hero-copy { padding: 48px 24px 76px; }
+  .hell-hero h1 { font-size: clamp(62px, 20vw, 100px); }
+  .hell-hero-copy > p:not(.eyebrow) { font-size: 21px; }
+  .hell-quote blockquote { font-size: 28px; }
+  .hell-poster-card { min-height: 460px; }
+  .hell-character-grid, .hell-production dl { grid-template-columns: 1fr; }
+  .hell-character-grid article { min-height: 230px; }
 }
