@@ -271,10 +271,12 @@ h2 {
 }
 
 .credit-card-poster img {
-  width: 96px;
-  height: 138px;
-  object-fit: cover;
-  object-position: center top;
+  width: 116px;
+  height: 152px;
+  padding: 6px;
+  object-fit: contain;
+  object-position: center;
+  background: rgba(0,0,0,.42);
 }
 
 .credit-card-logo img {
