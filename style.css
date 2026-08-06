@@ -270,7 +270,7 @@ h2 {
 
 .credits-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   border-top: 1px solid rgba(255,90,31,.28);
   border-left: 1px solid rgba(255,90,31,.28);
@@ -363,17 +363,6 @@ h2 {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(20px, 2.2vw, 30px);
   line-height: 1.18;
-}
-
-.credit-card-names {
-  align-items: flex-end;
-  background:
-    linear-gradient(145deg, rgba(255,90,31,.12), transparent 62%),
-    radial-gradient(circle at 80% 15%, rgba(255,90,31,.14), transparent 42%);
-}
-
-.credit-card-names > div {
-  max-width: 560px;
 }
 
 .contact-panel {
