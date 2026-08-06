@@ -422,7 +422,9 @@ footer img {
 .card-sidd {
   background:
     linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.94)),
-    url("assets/sidd/los-misterios.jpg") center / cover no-repeat;
+    radial-gradient(circle at 50% 28%, rgba(255,90,31,.18), transparent 48%),
+    url("assets/sidd/los-misterios.jpg") center / contain no-repeat,
+    #070707;
 }
 
 .card-hell {
@@ -444,7 +446,9 @@ footer img {
 .card-strings {
   background:
     linear-gradient(rgba(0,0,0,.05), rgba(0,0,0,.94)),
-    url("assets/strings/hero.jpg") center / cover no-repeat;
+    radial-gradient(circle at 50% 28%, rgba(255,90,31,.18), transparent 48%),
+    url("assets/strings/hero.jpg") center / contain no-repeat,
+    #070707;
 }
 
 .card span {
