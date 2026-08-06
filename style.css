@@ -416,14 +416,18 @@ footer img {
 
 .card-forever {
   background:
-    linear-gradient(rgba(0,0,0,.16), rgba(0,0,0,.94)),
-    url("assets/forever-tree/poster.jpg") center 28% / cover no-repeat;
+    linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.94)),
+    radial-gradient(circle at 50% 28%, rgba(255,90,31,.18), transparent 48%),
+    url("assets/forever-tree/poster.jpg") center 38% / contain no-repeat,
+    #070707;
 }
 
 .card-crow {
   background:
     linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.92)),
-    url("assets/crow-flies/village-night.jpg") center / cover no-repeat;
+    radial-gradient(circle at 50% 24%, rgba(255,90,31,.16), transparent 50%),
+    url("assets/crow-flies/novel-cover.jpg") center 36% / contain no-repeat,
+    #070707;
 }
 
 .card-sidd {
@@ -435,13 +439,17 @@ footer img {
 .card-hell {
   background:
     linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.92)),
-    url("assets/forty-minutes/nolan-sideline.jpg?v=2") 32% center / cover no-repeat;
+    radial-gradient(circle at 50% 26%, rgba(255,38,61,.18), transparent 48%),
+    url("assets/forty-minutes/poster.jpg?v=2") center 38% / contain no-repeat,
+    #070707;
 }
 
 .card-loren {
   background:
-    linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.94)),
-    url("assets/finding-loren/poster.jpg") center 32% / cover no-repeat;
+    linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.94)),
+    radial-gradient(circle at 50% 28%, rgba(213,167,95,.18), transparent 48%),
+    url("assets/finding-loren/poster.jpg") center 38% / contain no-repeat,
+    #070707;
 }
 
 .card-strings {
