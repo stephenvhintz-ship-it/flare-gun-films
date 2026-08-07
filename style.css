@@ -354,6 +354,10 @@ h2 {
   margin-right: auto;
 }
 
+.contact-panel h2 {
+  font-size: clamp(32px, 4vw, 52px);
+}
+
 .contact-panel p {
   color: #d8cfc3;
   font-size: 21px;
