@@ -95,15 +95,22 @@ body {
   align-items: center;
 }
 
-.hero-logo {
+.hero-logo-crop {
   display: block;
   width: min(360px, 68vw);
-  height: auto;
+  aspect-ratio: 1.16;
   margin: 0 auto clamp(20px, 3vh, 34px);
+  overflow: hidden;
+  filter: drop-shadow(0 0 42px rgba(255,90,31,.45));
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  height: auto;
   padding: 0;
   border: 0;
   background: transparent;
-  filter: drop-shadow(0 0 42px rgba(255,90,31,.45));
 }
 
 .eyebrow {
