@@ -294,9 +294,9 @@ h2 {
 .work-art {
   width: 100%;
   aspect-ratio: 4 / 5;
+  padding: 14px;
   display: grid;
   place-items: center;
-  overflow: hidden;
   background: radial-gradient(circle at 50% 42%, #24201d, #080808 72%);
 }
 
@@ -306,11 +306,10 @@ h2 {
   height: 100%;
   object-fit: contain;
   filter: saturate(.85) contrast(1.05);
-  transition: transform .35s ease, filter .35s ease;
+  transition: filter .35s ease;
 }
 
 .work-title:hover .work-art img {
-  transform: scale(1.025);
   filter: saturate(1) contrast(1.05);
 }
 
