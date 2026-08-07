@@ -97,9 +97,9 @@ body {
 
 .hero-logo {
   display: block;
-  width: min(430px, 72vw);
+  width: min(360px, 68vw);
   height: auto;
-  margin: 0 auto clamp(16px, 2.4vh, 30px);
+  margin: 0 auto clamp(20px, 3vh, 34px);
   padding: 0;
   border: 0;
   background: transparent;
