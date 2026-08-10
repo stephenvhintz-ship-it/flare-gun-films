@@ -331,14 +331,35 @@ h2 {
   text-transform: uppercase;
 }
 
+.work-caption h3 span {
+  color: #aaa;
+  font-size: .55em;
+  letter-spacing: 0;
+}
+
 .work-caption p {
   margin: 9px 0 0;
   color: #aaa;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.work-caption strong,
+.work-caption small {
+  display: block;
+}
+
+.work-caption strong {
+  color: #ff5a1f;
   font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1.8px;
-  line-height: 1.4;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+}
+
+.work-caption small {
+  margin-top: 7px;
+  color: #b8b0a7;
+  font-size: 12px;
 }
 
 .contact-panel {
