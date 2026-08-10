@@ -2013,6 +2013,13 @@ footer a {
   .teaser-shell { grid-template-columns: 1fr; }
   .teaser-art { min-height: 0; align-self: auto; }
   .teaser-art img { max-height: none; }
+  :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy { display: contents; }
+  :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy > .eyebrow { order: 1; }
+  :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy > h1 { order: 2; }
+  :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy > .lead { order: 3; }
+  :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-art { order: 4; }
+  :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy > .teaser-facts { order: 5; }
+  :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy > .teaser-access { order: 6; }
 }
 
 @media (max-width: 560px) {
