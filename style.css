@@ -186,6 +186,16 @@ h2 {
   line-height: 1.6;
 }
 
+.slate-access {
+  margin: 30px 0 0;
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -246,6 +256,17 @@ h2 {
   color: #d8cfc3;
   font-size: 21px;
   line-height: 1.65;
+}
+
+.split .about-flare {
+  color: #f7efe6;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(23px, 2.6vw, 34px);
+  line-height: 1.35;
+}
+
+.about-link {
+  margin-top: 8px;
 }
 
 .selected-work {
@@ -388,6 +409,23 @@ h2 {
   font-size: 21px;
   line-height: 1.6;
   margin-bottom: 34px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-panel .contact-locations {
+  margin-top: 28px;
+  margin-bottom: 0;
+  color: #938b82;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 footer {
