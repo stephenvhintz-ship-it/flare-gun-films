@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Flare Gun Films regarding industry partnerships, representation, financing, distribution, or project materials.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.flaregunfilms.com/industry-inquiry.html">
+  <title>Industry Inquiry | Flare Gun Films</title>
+  <link rel="stylesheet" href="style.css?v=2026-08-09-industry-form">
+</head>
+<body class="inquiry-page">
+  <header class="nav">
+    <a class="brand" href="/"><img src="FlareGun-Slogan3 - Clear.png" alt="Flare Gun Films logo"></a>
+    <nav>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="inquiry-shell">
+    <header class="inquiry-intro">
+      <p class="eyebrow">Industry Inquiries</p>
+      <h1>Tell us who you are and what you&rsquo;re interested in.</h1>
+      <p>We respond to industry inquiries within a week.</p>
+    </header>
+
+    <form class="industry-form" action="https://formsubmit.co/info@flaregunfilms.com" method="POST">
+      <input type="hidden" name="_subject" value="New Flare Gun Films industry inquiry">
+      <input type="hidden" name="_next" value="https://www.flaregunfilms.com/thanks.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_url" value="https://www.flaregunfilms.com/industry-inquiry.html">
+      <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+      <div class="form-grid">
+        <label>
+          <span>Name <b aria-hidden="true">*</b></span>
+          <input type="text" name="Name" autocomplete="name" required>
+        </label>
+        <label>
+          <span>Company / Representation <b aria-hidden="true">*</b></span>
+          <input type="text" name="Company or Representation" autocomplete="organization" required>
+        </label>
+        <label>
+          <span>Role <b aria-hidden="true">*</b></span>
+          <select name="Role" required>
+            <option value="" selected disabled>Select your role</option>
+            <option>Producer</option>
+            <option>Financier / Investor</option>
+            <option>Agent / Manager</option>
+            <option>Talent / Representative</option>
+            <option>Distribution / Sales</option>
+            <option>Press</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          <span>Email <b aria-hidden="true">*</b></span>
+          <input type="email" name="Email" autocomplete="email" required>
+        </label>
+      </div>
+
+      <fieldset>
+        <legend>Project(s) of interest</legend>
+        <div class="project-options">
+          <label><input type="checkbox" name="Projects" value="Strings"> <span>Strings</span></label>
+          <label><input type="checkbox" name="Projects" value="Finding Loren"> <span>Finding Loren</span></label>
+          <label><input type="checkbox" name="Projects" value="Forever Tree"> <span>Forever Tree</span></label>
+          <label><input type="checkbox" name="Projects" value="40 Minutes of Hell"> <span>40 Minutes of Hell</span></label>
+          <label><input type="checkbox" name="Projects" value="Sidd"> <span>Sidd</span></label>
+          <label><input type="checkbox" name="Projects" value="3 Days as the Crow Flies"> <span>3 Days as the Crow Flies</span></label>
+          <label><input type="checkbox" name="Projects" value="The slate generally"> <span>The slate generally</span></label>
+        </div>
+      </fieldset>
+
+      <div class="form-grid">
+        <label>
+          <span>Nature of inquiry <b aria-hidden="true">*</b></span>
+          <select name="Nature of Inquiry" required>
+            <option value="" selected disabled>Select an inquiry type</option>
+            <option>Requesting materials</option>
+            <option>Exploring a partnership</option>
+            <option>Financing</option>
+            <option>Representation</option>
+            <option>Press</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          <span>How did you find us?</span>
+          <input type="text" name="How They Found Us">
+        </label>
+      </div>
+
+      <label class="form-message">
+        <span>Message</span>
+        <textarea name="Message" rows="6"></textarea>
+      </label>
+
+      <div class="form-submit">
+        <button class="button" type="submit">Send Industry Inquiry</button>
+        <p>Materials are shared with verified industry contacts.</p>
+      </div>
+    </form>
+  </main>
+
+  <footer id="contact">
+    <img src="FlareGun-Slogan3 - Clear.png" alt="Flare Gun Films logo">
+    <p>Film &bull; Publishing</p>
+    <p>Springdale, Arkansas</p>
+    <a href="mailto:info@flaregunfilms.com">info@flaregunfilms.com</a>
+    <div class="footer-legal">
+      <p class="copyright">&copy; 2026 Flare Gun Films</p>
+      <p class="submission-note">Flare Gun Films does not accept unsolicited scripts, treatments, concepts, or other creative materials. Anything sent unsolicited will not be read or returned.</p>
+    </div>
+  </footer>
+
+  <script>
+    const requestedProject = new URLSearchParams(window.location.search).get('project');
+    if (requestedProject) {
+      document.querySelectorAll('input[name="Projects"]').forEach((field) => {
+        field.checked = field.value === requestedProject;
+      });
+    }
+  </script>
+</body>
+</html>
