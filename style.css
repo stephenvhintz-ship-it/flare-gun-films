@@ -355,7 +355,7 @@ h2 {
 }
 
 .contact-panel h2 {
-  font-size: clamp(26px, 3.25vw, 42px);
+  font-size: 26px;
 }
 
 .contact-panel p {
