@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Flare Gun: Movie Mogul — Clickable Prototype</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0e0f12;--panel:#191b21;--panel2:#242731;--ink:#fff8ed;--muted:#a9acb6;--orange:#ff6b35;--gold:#f3b61f;--green:#2cb67d;--red:#df4b58;--line:#353945;--shadow:0 28px 70px rgba(0,0,0,.48)}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#352013 0,transparent 34%),linear-gradient(145deg,#111318,#060708);color:var(--ink);font:15px/1.42 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:grid;place-items:center;padding:24px}
+    button{font:inherit}.stage{width:min(1120px,100%);display:grid;grid-template-columns:minmax(300px,390px) 1fr;gap:32px;align-items:center}.phone{width:100%;min-height:760px;background:var(--bg);border:10px solid #050505;border-radius:44px;box-shadow:var(--shadow);overflow:hidden;position:relative}.notch{height:27px;width:128px;background:#050505;border-radius:0 0 18px 18px;position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:5}.screen{display:none;min-height:740px;padding:45px 20px 24px;flex-direction:column}.screen.active{display:flex}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);font-weight:800}.topline{display:flex;justify-content:space-between;align-items:center;gap:12px}.cash{font-variant-numeric:tabular-nums;font-weight:800}.cash span{color:var(--green)}h1{font-size:31px;line-height:1.02;margin:12px 0 7px;letter-spacing:-.04em}h2{font-size:23px;line-height:1.08;margin:10px 0}.sub{color:var(--muted);margin:0 0 18px}.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:17px;margin:8px 0}.card.selected{border-color:var(--orange);box-shadow:0 0 0 1px var(--orange) inset}.poster{height:194px;border-radius:14px;background:linear-gradient(150deg,rgba(255,107,53,.2),rgba(0,0,0,.78)),repeating-linear-gradient(135deg,#27211e 0 12px,#161719 12px 24px);display:flex;align-items:flex-end;padding:18px;margin-bottom:14px}.poster strong{font-size:28px;line-height:.9;text-transform:uppercase;width:190px}.tag{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:11px;color:var(--muted);margin:3px 4px 3px 0}.statgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:10px 0}.stat{background:#121419;border-radius:12px;padding:11px}.stat small{display:block;color:var(--muted);font-size:11px}.stat b{font-size:19px}.choice{width:100%;text-align:left;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:15px;padding:14px;margin:6px 0;cursor:pointer}.choice:hover,.choice:focus-visible,.choice.on{border-color:var(--orange);background:#2a211e;outline:none}.choice strong{display:block}.choice small{color:var(--muted)}.button{width:100%;border:0;border-radius:14px;padding:15px 16px;background:var(--orange);color:#160b06;font-weight:900;cursor:pointer;margin-top:auto}.button:disabled{opacity:.35;cursor:not-allowed}.button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);margin-top:9px}.progress{display:flex;gap:5px;margin:14px 0 18px}.progress i{height:4px;background:#333743;flex:1;border-radius:99px}.progress i.done{background:var(--orange)}.event{border-left:4px solid var(--gold)}.results{display:grid;grid-template-columns:1fr 1fr;gap:8px}.result{padding:14px;background:var(--panel);border-radius:14px}.result.big{grid-column:1/-1;background:linear-gradient(135deg,#213a30,#14231d)}.result span{display:block;color:var(--muted);font-size:11px}.result b{font-size:22px}.quote{font-style:italic;color:#e8dfd2;border-left:2px solid var(--orange);padding-left:10px}.upgrade{display:flex;gap:12px;align-items:center}.upgrade .level{width:48px;height:48px;border-radius:12px;background:#131519;display:grid;place-items:center;color:var(--gold);font-weight:900}.locked{opacity:.58}.side{max-width:620px}.side h2{font-size:36px}.side p{color:#c2c4cc}.steps{display:grid;gap:10px;margin:22px 0}.step{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid #252832}.step b{width:27px;height:27px;border-radius:50%;background:var(--orange);color:#170b06;display:grid;place-items:center;flex:0 0 auto}.test-note{background:#15171c;border:1px solid #292d37;border-radius:18px;padding:18px}.test-note strong{color:var(--gold)}.debug{position:absolute;right:12px;top:34px;background:#000b;border:1px solid #444;border-radius:10px;padding:7px 9px;font:11px/1.35 ui-monospace,SFMono-Regular,monospace;color:#b5ffcf;z-index:4;display:none}.debug.on{display:block}.debug-toggle{position:absolute;right:13px;bottom:12px;border:0;background:transparent;color:#5e626d;font-size:10px;cursor:pointer;z-index:5}.toast{position:absolute;left:20px;right:20px;bottom:74px;background:#f8efe1;color:#21160f;padding:11px;border-radius:12px;text-align:center;font-weight:800;transform:translateY(18px);opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:none}@media(max-width:800px){body{padding:0;background:#060708}.stage{display:block;width:100%}.phone{border:0;border-radius:0;min-height:100vh}.screen{min-height:100vh}.side{display:none}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="stage">
+    <section class="phone" aria-label="Movie Mogul mobile prototype">
+      <div class="notch" aria-hidden="true"></div>
+      <div id="debug" class="debug"></div>
+      <button class="debug-toggle" id="debugToggle" aria-label="Toggle debug information">DEBUG</button>
+      <div id="toast" class="toast" role="status"></div>
+
+      <section class="screen active" data-screen="studio">
+        <div class="topline"><span class="eyebrow">Flare Gun Films</span><span class="cash">Cash <span>$2,500</span></span></div>
+        <h1>Your studio starts in a spare bedroom.</h1>
+        <p class="sub">One cheap movie could change everything. Or wipe you out.</p>
+        <div class="card">
+          <div class="eyebrow">Studio level 0</div>
+          <h2>Bedroom Producer</h2>
+          <div class="statgrid"><div class="stat"><small>Reputation</small><b>0</b></div><div class="stat"><small>Fans</small><b>12</b></div><div class="stat"><small>Films released</small><b>0</b></div><div class="stat"><small>Biggest budget</small><b>$0</b></div></div>
+        </div>
+        <div class="card"><strong>Today’s market</strong><p class="sub" style="margin:5px 0 0">Horror demand is surging. Audiences want a killer concept more than famous actors.</p></div>
+        <button class="button" data-go="project">Choose your first project</button>
+      </section>
+
+      <section class="screen" data-screen="project">
+        <div class="topline"><span class="eyebrow">Project shelf</span><span class="cash">Cash <span>$2,500</span></span></div>
+        <div class="progress"><i class="done"></i><i></i><i></i><i></i></div>
+        <h1>Pick the movie.</h1><p class="sub">At the beginning, survival is the strategy.</p>
+        <button class="choice selected" data-project="toaster" aria-pressed="true">
+          <div class="poster"><strong>The Possessed Toaster</strong></div>
+          <span class="tag">Horror short</span><span class="tag">$2,000 budget</span><span class="tag">High demand</span>
+          <p>A cursed appliance torments a broke college student during breakfast.</p>
+          <small>Upside: festival attention + viral concept<br>Risk: one location, one joke, no stars</small>
+        </button>
+        <button class="button" data-go="casting">Greenlight for $2,000</button>
+      </section>
+
+      <section class="screen" data-screen="casting">
+        <div class="topline"><span class="eyebrow">Build the team</span><span class="cash">Committed <span>$2,000</span></span></div>
+        <div class="progress"><i class="done"></i><i class="done"></i><i></i><i></i></div>
+        <h1>Cheap. Hungry. Right for the movie.</h1><p class="sub">The prototype uses a fixed first team so testers can focus on the core loop.</p>
+        <div class="card selected"><span class="tag">Director</span><h2>Ava Mercer</h2><p><strong>Efficient:</strong> controls cost, but caps maximum quality.</p><small class="sub">Best fit: any low-budget production</small></div>
+        <div class="card selected"><span class="tag">Lead</span><h2>Nia Reyes</h2><p><strong>Breakout:</strong> +15 buzz on a low-budget film.</p></div>
+        <div class="card selected"><span class="tag">Supporting</span><h2>June Bell</h2><p><strong>No Ego:</strong> improves chemistry and keeps costs down.</p></div>
+        <button class="button" data-go="production">Start shooting</button>
+      </section>
+
+      <section class="screen" data-screen="production">
+        <div class="topline"><span class="eyebrow">Production — day 3</span><span class="cash">Reserve <span>$500</span></span></div>
+        <div class="progress"><i class="done"></i><i class="done"></i><i class="done"></i><i></i></div>
+        <h1>A storm floods the exterior set.</h1>
+        <div class="card event"><span class="eyebrow" style="color:var(--gold)">Production event</span><h2>Rain Delay</h2><p>You are losing daylight. The crew can stay late, but it will consume most of your reserve.</p></div>
+        <button class="choice event-choice" data-event="protect" aria-pressed="false"><strong>Pay overtime — $300</strong><small>Quality +8 · safer reviews · less cash</small></button>
+        <button class="choice event-choice" data-event="push" aria-pressed="false"><strong>Push through the storm — $0</strong><small>Quality −10 · protect cash · risk the release</small></button>
+        <button id="releaseButton" class="button" disabled>Finish and release</button>
+      </section>
+
+      <section class="screen" data-screen="release">
+        <div class="topline"><span class="eyebrow">Opening night</span><span class="cash">Cash <span id="closingCash">$7,748</span></span></div>
+        <div class="progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i></div>
+        <h1>The toaster caught fire.</h1><p class="sub" id="releaseLine">In a good way. Horror fans are sharing the final kill everywhere.</p>
+        <div class="results">
+          <div class="result"><span>Critics</span><b id="critics">67</b></div><div class="result"><span>Audience</span><b id="audience">70</b></div>
+          <div class="result big"><span>Gross revenue</span><b id="gross">$10,783</b></div>
+          <div class="result"><span>Cash profit</span><b id="profit">+$5,248</b></div><div class="result"><span>New fans</span><b id="fans">+690</b></div>
+        </div>
+        <p class="quote" id="quote">“Against all reason, this ridiculous little movie works.”</p>
+        <div class="card upgrade"><div class="level">L1</div><div><strong>Editing Bay</strong><br><small class="sub">$750 · +5 postproduction quality</small></div></div>
+        <button id="upgradeButton" class="button">Buy upgrade — $750</button>
+        <button id="nextFilmButton" class="button secondary" style="display:none">Start Roommate From Below — $4,500</button>
+        <button id="resetButton" class="button secondary">Reset prototype</button>
+      </section>
+    </section>
+
+    <aside class="side">
+      <span class="eyebrow">Low-fidelity vertical slice</span><h2>Can one ridiculous short make players want a second movie?</h2>
+      <p>This prototype tests the emotional loop before art production or Unity engineering: choose, commit, confront trouble, release, grow.</p>
+      <div class="steps"><div class="step"><b>1</b><span><strong>Do not coach the player.</strong><br>Watch where they hesitate.</span></div><div class="step"><b>2</b><span><strong>Time the first release.</strong><br>Target: four minutes or less.</span></div><div class="step"><b>3</b><span><strong>Watch the final choice.</strong><br>Do they voluntarily buy the upgrade and start movie two?</span></div></div>
+      <div class="test-note"><strong>Success signal:</strong> at least 6 of 10 testers press “Start Roommate From Below” without being asked.</div>
+    </aside>
+  </main>
+  <script>
+    const state={screen:'studio',event:null,cash:2500,upgraded:false};
+    const screens=[...document.querySelectorAll('.screen')];
+    const debug=document.getElementById('debug'),toast=document.getElementById('toast');
+    function money(n){return new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0}).format(n)}
+    function go(name){state.screen=name;screens.forEach(x=>x.classList.toggle('active',x.dataset.screen===name));updateDebug();window.scrollTo(0,0)}
+    function updateDebug(){debug.textContent=`screen: ${state.screen}\nevent: ${state.event||'none'}\ncash: ${state.cash}\nupgrade: ${state.upgraded}`}
+    function flash(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1500)}
+    document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+    document.querySelectorAll('.event-choice').forEach(b=>b.addEventListener('click',()=>{state.event=b.dataset.event;document.querySelectorAll('.event-choice').forEach(x=>{const on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});document.getElementById('releaseButton').disabled=false;updateDebug()}));
+    document.getElementById('releaseButton').addEventListener('click',()=>{
+      const protect=state.event==='protect',quality=protect?63:45,critics=quality+(protect?4:2),audience=Math.round(quality*.6+85*.25+50*.15),gross=Math.round(2000*(.35+quality/100*1.25+.85*.75+.5*.5)*2.5),eventCost=protect?300:0,proceeds=Math.round(gross*.7),profit=proceeds-2000-eventCost;state.cash=2500+profit;
+      document.getElementById('critics').textContent=critics;document.getElementById('audience').textContent=audience;document.getElementById('gross').textContent=money(gross);document.getElementById('profit').textContent=(profit>=0?'+':'')+money(profit);document.getElementById('closingCash').textContent=money(state.cash);document.getElementById('fans').textContent=protect?'+690':'+420';document.getElementById('releaseLine').textContent=protect?'In a good way. Horror fans are sharing the final kill everywhere.':'It is messy, cheap and strangely shareable. You survived—but reviewers noticed the storm.';document.getElementById('quote').textContent=protect?'“Against all reason, this ridiculous little movie works.”':'“The concept is better than the execution, but you have to admire the nerve.”';go('release')
+    });
+    document.getElementById('upgradeButton').addEventListener('click',e=>{if(state.upgraded)return;if(state.cash<750){flash('Not enough cash');return}state.cash-=750;state.upgraded=true;e.currentTarget.textContent='Editing Bay installed';e.currentTarget.disabled=true;document.getElementById('closingCash').textContent=money(state.cash);document.getElementById('nextFilmButton').style.display='block';flash('Postproduction quality +5');updateDebug()});
+    document.getElementById('nextFilmButton').addEventListener('click',()=>flash('Prototype complete: film two selected!'));
+    document.getElementById('resetButton').addEventListener('click',()=>location.reload());
+    document.getElementById('debugToggle').addEventListener('click',()=>debug.classList.toggle('on'));
+    updateDebug();
+  </script>
+</body>
+</html>
