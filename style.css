@@ -495,6 +495,129 @@ footer img {
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
+.card-mogul {
+  background:
+    linear-gradient(rgba(0,0,0,.02), rgba(0,0,0,.94)),
+    radial-gradient(circle at 74% 28%, rgba(255,174,54,.22), transparent 45%),
+    url("assets/movie-mogul/steve-on-set.webp") center / cover no-repeat;
+}
+
+.mogul-page {
+  --mogul-gold: #f2b544;
+  --mogul-cream: #f5e9d0;
+  --mogul-burgundy: #7d241f;
+  background: #080706;
+}
+
+.mogul-page .eyebrow { color: var(--mogul-gold); }
+.mogul-page .button { border-color: var(--mogul-gold); color: var(--mogul-gold); }
+.mogul-page .button:hover,
+.mogul-page .button-solid { background: var(--mogul-gold); color: #130e07; }
+.mogul-page .button-solid:hover { background: #ffd477; border-color: #ffd477; }
+
+.mogul-hero {
+  min-height: calc(100vh - 76px);
+  padding: clamp(92px, 12vw, 180px) 30px clamp(70px, 9vw, 120px);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(4,3,2,.96) 0%, rgba(4,3,2,.72) 42%, rgba(4,3,2,.15) 75%),
+    linear-gradient(0deg, #080706 0%, transparent 36%),
+    url("assets/movie-mogul/steve-on-set.webp") center / cover no-repeat;
+  border-bottom: 1px solid rgba(242,181,68,.24);
+}
+
+.mogul-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 68% 35%, rgba(255,182,65,.22), transparent 30%);
+  mix-blend-mode: screen;
+}
+
+.mogul-hero-copy {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.mogul-hero h1 {
+  max-width: 780px;
+  margin: 0;
+  color: var(--mogul-cream);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(78px, 14vw, 200px);
+  font-weight: 950;
+  line-height: .72;
+  letter-spacing: -.075em;
+  text-transform: uppercase;
+  text-shadow: 0 12px 44px rgba(0,0,0,.68);
+}
+
+.mogul-hero h1 span { display: block; color: var(--mogul-gold); font-size: .54em; letter-spacing: .12em; }
+.mogul-tagline { margin: 34px 0 0; color: #fff; text-transform: uppercase; letter-spacing: .35em; font-size: 13px; font-weight: 900; }
+.mogul-intro { max-width: 590px; margin: 18px 0 0; color: #e4d9c6; font-family: Georgia, "Times New Roman", serif; font-size: clamp(21px, 2.4vw, 32px); line-height: 1.28; }
+.mogul-actions { margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px; }
+.mogul-actions span { color: #c9bfae; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: 900; }
+
+.mogul-hook {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(78px, 10vw, 140px) 30px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(50px, 8vw, 120px);
+  border-bottom: 1px solid rgba(255,255,255,.09);
+}
+
+.mogul-hook h2 { max-width: 720px; color: var(--mogul-cream); font-family: Georgia, "Times New Roman", serif; font-size: clamp(42px, 6.5vw, 88px); font-weight: 400; line-height: .98; text-transform: none; letter-spacing: -.05em; }
+.mogul-hook-copy > p { margin: 0 0 42px; color: #c8bca9; font-size: 19px; line-height: 1.75; }
+.mogul-meta { margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(242,181,68,.35); border-left: 1px solid rgba(242,181,68,.35); }
+.mogul-meta div { min-height: 132px; padding: 20px; border-right: 1px solid rgba(242,181,68,.35); border-bottom: 1px solid rgba(242,181,68,.35); background: rgba(242,181,68,.045); }
+.mogul-meta dt { color: var(--mogul-gold); text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: 900; }
+.mogul-meta dd { margin: 34px 0 0; color: #f4e7cf; font-family: Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.2; }
+
+.mogul-play-loop { max-width: 1320px; margin: 0 auto; padding: clamp(78px, 10vw, 140px) 30px; }
+.mogul-play-loop > h2 { max-width: 850px; color: #fff; }
+.mogul-step-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 50px; border-top: 1px solid rgba(242,181,68,.32); border-left: 1px solid rgba(242,181,68,.32); }
+.mogul-step-grid article { min-height: 380px; padding: 28px; display: flex; flex-direction: column; border-right: 1px solid rgba(242,181,68,.32); border-bottom: 1px solid rgba(242,181,68,.32); background: linear-gradient(150deg, rgba(242,181,68,.08), transparent 58%); }
+.mogul-step-grid article > span { color: var(--mogul-gold); font-family: "Courier New", monospace; font-size: 12px; font-weight: 900; }
+.mogul-step-icon { margin: auto 0 34px; color: var(--mogul-gold); font-size: 62px; text-shadow: 0 0 34px rgba(242,181,68,.3); }
+.mogul-step-grid h3 { margin: 0 0 14px; color: var(--mogul-cream); text-transform: uppercase; font-size: 26px; line-height: 1; }
+.mogul-step-grid p { margin: 0; color: #bcae9b; font-size: 16px; line-height: 1.6; }
+
+.mogul-career {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: clamp(65px, 9vw, 125px) 30px;
+  display: grid;
+  grid-template-columns: minmax(320px, .82fr) minmax(0, 1.18fr);
+  gap: clamp(45px, 8vw, 120px);
+  align-items: center;
+  background: radial-gradient(circle at 25% 50%, rgba(242,181,68,.13), transparent 34%);
+  border-top: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.mogul-career-art { min-height: 680px; display: grid; place-items: end center; overflow: hidden; background: radial-gradient(circle at 50% 45%, rgba(242,181,68,.25), transparent 53%); }
+.mogul-career-art img { display: block; width: min(100%, 580px); max-height: 760px; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 32px 34px rgba(0,0,0,.58)); }
+.mogul-career-copy h2 { color: var(--mogul-cream); }
+.mogul-career-copy > p:not(.eyebrow) { max-width: 700px; color: #c2b5a2; font-size: 19px; line-height: 1.75; }
+.mogul-numbers { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(242,181,68,.34); }
+.mogul-numbers div { padding: 24px 18px 0 0; }
+.mogul-numbers strong { display: block; color: var(--mogul-gold); font-family: Georgia, "Times New Roman", serif; font-size: clamp(44px, 5.5vw, 76px); font-weight: 400; line-height: 1; }
+.mogul-numbers span { display: block; margin-top: 9px; color: #c5b8a5; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; font-weight: 900; }
+
+.mogul-now-playing { padding: clamp(88px, 12vw, 170px) 30px; text-align: center; background: radial-gradient(circle at 50% 45%, rgba(125,36,31,.36), transparent 40%), #080706; }
+.mogul-now-playing h2 { max-width: 900px; margin-left: auto; margin-right: auto; color: #fff; }
+.mogul-now-playing > p:not(.eyebrow) { max-width: 660px; margin: 0 auto 34px; color: #c9bba8; font-size: 19px; line-height: 1.65; }
+.mogul-now-playing small { max-width: 630px; margin: 20px auto 0; display: block; color: #827768; line-height: 1.5; }
+
 .card span {
   margin-top: 24px;
   color: #d8cfc3;
@@ -2065,6 +2188,10 @@ footer a {
   :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy > .teaser-facts { order: 5; }
   .forever-tree-page .teaser-copy > .festival-selections { order: 6; }
   :is(.forever-tree-page, .strings-page, .sidd-page, .loren-page) .teaser-copy > .teaser-access { order: 7; }
+  .mogul-hook, .mogul-career { grid-template-columns: 1fr; }
+  .mogul-career-art { min-height: 560px; }
+  .mogul-step-grid { grid-template-columns: 1fr; }
+  .mogul-step-grid article { min-height: 300px; }
 }
 
 @media (max-width: 560px) {
@@ -2131,4 +2258,13 @@ footer a {
   .teaser-copy h1 { font-size: clamp(52px, 18vw, 84px); }
   .teaser-copy .lead { font-size: 22px; }
   .teaser-access { padding: 18px; }
+  .mogul-page .nav nav a:nth-child(2) { display: none; }
+  .mogul-hero { min-height: 76vh; padding: 90px 22px 64px; background-position: 42% center; }
+  .mogul-hero h1 { font-size: clamp(70px, 25vw, 108px); }
+  .mogul-tagline { letter-spacing: .22em; }
+  .mogul-meta, .mogul-numbers { grid-template-columns: 1fr; }
+  .mogul-meta div { min-height: 102px; }
+  .mogul-meta dd { margin-top: 20px; }
+  .mogul-career-art { min-height: 430px; }
+  .mogul-step-grid article { min-height: 280px; }
 }
