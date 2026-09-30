@@ -482,14 +482,14 @@ footer img {
     #070707;
 }
 
-.crow-cinema-section {
+:is(.crow-cinema-section, .forever-cinema-section) {
   max-width: 1180px;
   margin: 0 auto;
   padding: 80px 30px 120px;
   text-align: center;
 }
 
-.crow-cinema-section h2 {
+:is(.crow-cinema-section, .forever-cinema-section) h2 {
   margin: 8px 0 42px;
   color: var(--crow-cream);
   font-family: Georgia, "Times New Roman", serif;
@@ -498,14 +498,14 @@ footer img {
   letter-spacing: -.035em;
 }
 
-.crow-theater {
+.cinema-theater {
   padding: 18px 18px 24px;
   border: 2px solid #9b6b2d;
   background: linear-gradient(145deg, #6b451c, #211407 42%, #503115 78%, #120a04);
   box-shadow: 0 35px 100px rgba(0,0,0,.78), inset 0 0 0 5px #1b1007, inset 0 0 0 7px rgba(221,167,83,.42);
 }
 
-.crow-marquee {
+.cinema-marquee {
   margin-bottom: 16px;
   padding: 18px 54px;
   position: relative;
@@ -522,13 +522,13 @@ footer img {
   text-shadow: 0 1px rgba(255,255,255,.65);
 }
 
-.crow-marquee span {
+.cinema-marquee span {
   display: inline-block;
   padding: 7px 20px;
   background: rgba(239,224,181,.9);
 }
 
-.crow-stage {
+.cinema-stage {
   min-width: 0;
   display: grid;
   grid-template-columns: clamp(24px, 7vw, 82px) minmax(0, 1fr) clamp(24px, 7vw, 82px);
@@ -536,7 +536,7 @@ footer img {
   background: #160202;
 }
 
-.crow-screen {
+.cinema-screen {
   min-width: 0;
   padding: 10px;
   border: 8px solid #120d08;
@@ -544,7 +544,7 @@ footer img {
   box-shadow: 0 0 0 2px #b08343, 0 0 40px rgba(255,216,145,.14);
 }
 
-.crow-screen video {
+.cinema-screen :is(video, iframe) {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -552,7 +552,7 @@ footer img {
   object-fit: contain;
 }
 
-.crow-curtain {
+.cinema-curtain {
   position: relative;
   z-index: 1;
   background:
@@ -561,18 +561,36 @@ footer img {
   box-shadow: inset -8px 0 18px rgba(0,0,0,.55);
 }
 
-.crow-curtain-right {
+.cinema-curtain-right {
   transform: scaleX(-1);
 }
 
+.forever-cinema-section {
+  border-top: 1px solid rgba(232,221,186,.12);
+  background: radial-gradient(circle at 50% 58%, rgba(185,170,135,.09), transparent 48%);
+}
+
+.forever-cinema-section .eyebrow { color: #b9aa87; }
+
+.forever-theater {
+  border-color: #857041;
+  background: linear-gradient(145deg, #564821, #151b14 42%, #463a1e 78%, #080c08);
+}
+
+.forever-theater .cinema-curtain {
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.045) 0 5px, transparent 5px 14px),
+    linear-gradient(90deg, #061109, #18351f 42%, #0a1f11 75%, #020704);
+}
+
 @media (max-width: 560px) {
-  .crow-cinema-section { padding: 58px 14px 84px; }
-  .crow-cinema-section h2 { margin-bottom: 28px; }
-  .crow-theater { padding: 8px 8px 12px; }
-  .crow-marquee { margin-bottom: 8px; padding: 9px 18px; letter-spacing: 2px; }
-  .crow-marquee span { padding: 5px 8px; }
-  .crow-stage { grid-template-columns: 13px minmax(0, 1fr) 13px; }
-  .crow-screen { padding: 3px; border-width: 4px; }
+  :is(.crow-cinema-section, .forever-cinema-section) { padding: 58px 14px 84px; }
+  :is(.crow-cinema-section, .forever-cinema-section) h2 { margin-bottom: 28px; }
+  .cinema-theater { padding: 8px 8px 12px; }
+  .cinema-marquee { margin-bottom: 8px; padding: 9px 18px; letter-spacing: 2px; }
+  .cinema-marquee span { padding: 5px 8px; }
+  .cinema-stage { grid-template-columns: 13px minmax(0, 1fr) 13px; }
+  .cinema-screen { padding: 3px; border-width: 4px; }
 }
 
 .card-strings {
