@@ -935,6 +935,240 @@ footer img {
   --paper: #e8ddba;
 }
 
+.forever-project-hero {
+  min-height: auto;
+  padding-top: clamp(60px, 7vw, 100px);
+  padding-bottom: clamp(72px, 8vw, 112px);
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, .62fr);
+  gap: clamp(48px, 7vw, 100px);
+  align-items: center;
+}
+
+.forever-project-hero .teaser-copy h1 {
+  max-width: 760px;
+  font-size: clamp(72px, 9vw, 132px);
+  line-height: .8;
+}
+
+.forever-project-hero .teaser-copy .lead {
+  max-width: 760px;
+  font-size: clamp(26px, 2.6vw, 36px);
+  line-height: 1.23;
+}
+
+.forever-project-hero .teaser-facts {
+  max-width: 760px;
+}
+
+.forever-project-hero .teaser-access {
+  max-width: 680px;
+  margin-top: 30px;
+}
+
+.forever-project-hero .teaser-art {
+  min-height: 0;
+  margin-top: 40px;
+  align-self: start;
+}
+
+.forever-project-hero .teaser-art::before {
+  inset: 5% -5% -5% 8%;
+}
+
+.forever-project-hero .teaser-art img {
+  width: min(100%, 430px);
+  margin-inline: auto;
+  max-height: none;
+}
+
+.forever-festival-honors {
+  padding: clamp(78px, 9vw, 128px) 30px;
+  border-top: 1px solid rgba(232,221,186,.14);
+  border-bottom: 1px solid rgba(232,221,186,.14);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(185,170,135,.14), transparent 42%),
+    linear-gradient(135deg, #0b120d, #111913 52%, #080c09);
+}
+
+.forever-honors-heading {
+  max-width: 760px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.forever-honors-heading .eyebrow {
+  color: #b9aa87;
+}
+
+.forever-honors-heading h2 {
+  margin: 10px 0 18px;
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: 1;
+}
+
+.forever-honors-heading > p:last-child {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #bcb5a8;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.forever-laurel-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.forever-laurel-grid figure {
+  min-width: 0;
+  margin: 0;
+  padding: 22px 22px 20px;
+  border: 1px solid rgba(232,221,186,.22);
+  background: rgba(2,5,3,.5);
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0,0,0,.28);
+}
+
+.forever-laurel-mark {
+  height: 150px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f2e9;
+}
+
+.forever-laurel-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.forever-laurel-wide {
+  padding-inline: 10px;
+}
+
+.forever-laurel-grid figcaption {
+  min-height: 68px;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+}
+
+.forever-laurel-grid strong {
+  color: #eee6d8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.forever-laurel-grid span {
+  color: #918979;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.forever-project-nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 30px 30px 76px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.forever-project-nav a:last-child {
+  text-align: right;
+}
+
+@media (max-width: 850px) {
+  .forever-project-hero {
+    gap: 38px;
+    padding-top: 54px;
+  }
+
+  .forever-project-hero .teaser-art img {
+    max-width: 430px;
+  }
+
+  .forever-project-hero .teaser-art {
+    margin-top: 0;
+  }
+
+  .forever-festival-honors {
+    padding-inline: 24px;
+  }
+
+  .forever-laurel-grid {
+    max-width: 540px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .forever-project-hero {
+    padding: 46px 20px 72px;
+  }
+
+  .forever-project-hero .teaser-copy h1 {
+    font-size: clamp(58px, 20vw, 80px);
+  }
+
+  .forever-project-hero .teaser-copy .lead {
+    font-size: 23px;
+  }
+
+  .forever-project-hero .teaser-access .button {
+    width: 100%;
+    margin: 0 0 10px;
+    justify-content: center;
+  }
+
+  .forever-festival-honors {
+    padding: 66px 18px;
+  }
+
+  .forever-honors-heading {
+    margin-bottom: 34px;
+  }
+
+  .forever-honors-heading h2 {
+    font-size: 48px;
+  }
+
+  .forever-laurel-grid figure {
+    padding: 14px;
+  }
+
+  .forever-laurel-mark {
+    height: 138px;
+    padding: 16px;
+  }
+
+  .forever-project-nav {
+    padding: 26px 20px 62px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .forever-project-nav a:last-child {
+    text-align: left;
+  }
+}
+
 .festival-selections {
   max-width: 520px;
   margin-top: 24px;
