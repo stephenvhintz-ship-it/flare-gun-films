@@ -590,6 +590,14 @@ footer img {
   border-color: #9b6b2d;
 }
 
+.sizzle-reel-note {
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: #8f8a82;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .forever-cinema-section h2 {
   margin-bottom: 30px;
   font-size: clamp(42px, 4.5vw, 60px);
