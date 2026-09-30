@@ -478,8 +478,101 @@ footer img {
   background:
     linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.94)),
     radial-gradient(circle at 50% 28%, rgba(213,167,95,.18), transparent 48%),
-    url("assets/finding-loren/poster.jpg") center 38% / contain no-repeat,
+    url("assets/finding-loren/finding-loren-thumbnail.png") center 34% / contain no-repeat,
     #070707;
+}
+
+.crow-cinema-section {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 80px 30px 120px;
+  text-align: center;
+}
+
+.crow-cinema-section h2 {
+  margin: 8px 0 42px;
+  color: var(--crow-cream);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 6vw, 76px);
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+.crow-theater {
+  padding: 18px 18px 24px;
+  border: 2px solid #9b6b2d;
+  background: linear-gradient(145deg, #6b451c, #211407 42%, #503115 78%, #120a04);
+  box-shadow: 0 35px 100px rgba(0,0,0,.78), inset 0 0 0 5px #1b1007, inset 0 0 0 7px rgba(221,167,83,.42);
+}
+
+.crow-marquee {
+  margin-bottom: 16px;
+  padding: 18px 54px;
+  position: relative;
+  border: 4px double #7a4b17;
+  background:
+    radial-gradient(circle, #ffe4a1 0 2px, transparent 3px) 4px 4px / 18px 18px,
+    linear-gradient(#efe0b5, #c9a969);
+  color: #251305;
+  text-transform: uppercase;
+  letter-spacing: clamp(3px, .7vw, 8px);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(15px, 2.2vw, 27px);
+  font-weight: 700;
+  text-shadow: 0 1px rgba(255,255,255,.65);
+}
+
+.crow-marquee span {
+  display: inline-block;
+  padding: 7px 20px;
+  background: rgba(239,224,181,.9);
+}
+
+.crow-stage {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: clamp(24px, 7vw, 82px) minmax(0, 1fr) clamp(24px, 7vw, 82px);
+  align-items: stretch;
+  background: #160202;
+}
+
+.crow-screen {
+  min-width: 0;
+  padding: 10px;
+  border: 8px solid #120d08;
+  background: #030303;
+  box-shadow: 0 0 0 2px #b08343, 0 0 40px rgba(255,216,145,.14);
+}
+
+.crow-screen video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  object-fit: contain;
+}
+
+.crow-curtain {
+  position: relative;
+  z-index: 1;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 5px, transparent 5px 14px),
+    linear-gradient(90deg, #310308, #760d18 42%, #3c040b 75%, #170105);
+  box-shadow: inset -8px 0 18px rgba(0,0,0,.55);
+}
+
+.crow-curtain-right {
+  transform: scaleX(-1);
+}
+
+@media (max-width: 560px) {
+  .crow-cinema-section { padding: 58px 14px 84px; }
+  .crow-cinema-section h2 { margin-bottom: 28px; }
+  .crow-theater { padding: 8px 8px 12px; }
+  .crow-marquee { margin-bottom: 8px; padding: 9px 18px; letter-spacing: 2px; }
+  .crow-marquee span { padding: 5px 8px; }
+  .crow-stage { grid-template-columns: 13px minmax(0, 1fr) 13px; }
+  .crow-screen { padding: 3px; border-width: 4px; }
 }
 
 .card-strings {
