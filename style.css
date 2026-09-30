@@ -482,14 +482,14 @@ footer img {
     #070707;
 }
 
-:is(.crow-cinema-section, .forever-cinema-section) {
+:is(.crow-cinema-section, .forever-cinema-section, .hell-cinema-section) {
   max-width: 1180px;
   margin: 0 auto;
   padding: 80px 30px 120px;
   text-align: center;
 }
 
-:is(.crow-cinema-section, .forever-cinema-section) h2 {
+:is(.crow-cinema-section, .forever-cinema-section, .hell-cinema-section) h2 {
   margin: 8px 0 42px;
   color: var(--crow-cream);
   font-family: Georgia, "Times New Roman", serif;
@@ -573,6 +573,23 @@ footer img {
   background: radial-gradient(circle at 50% 58%, rgba(185,170,135,.09), transparent 48%);
 }
 
+.hell-cinema-section {
+  max-width: 1020px;
+  padding-top: 68px;
+  padding-bottom: 88px;
+  border-top: 1px solid rgba(255,90,31,.16);
+  background: radial-gradient(circle at 50% 58%, rgba(255,90,31,.08), transparent 48%);
+}
+
+.hell-cinema-section h2 {
+  margin-bottom: 30px;
+  font-size: clamp(42px, 4.5vw, 60px);
+}
+
+.hell-theater {
+  border-color: #9b6b2d;
+}
+
 .forever-cinema-section h2 {
   margin-bottom: 30px;
   font-size: clamp(42px, 4.5vw, 60px);
@@ -592,8 +609,8 @@ footer img {
 }
 
 @media (max-width: 560px) {
-  :is(.crow-cinema-section, .forever-cinema-section) { padding: 58px 14px 84px; }
-  :is(.crow-cinema-section, .forever-cinema-section) h2 { margin-bottom: 28px; }
+  :is(.crow-cinema-section, .forever-cinema-section, .hell-cinema-section) { padding: 58px 14px 84px; }
+  :is(.crow-cinema-section, .forever-cinema-section, .hell-cinema-section) h2 { margin-bottom: 28px; }
   .cinema-theater { padding: 8px 8px 12px; }
   .cinema-marquee { margin-bottom: 8px; padding: 9px 18px; letter-spacing: 2px; }
   .cinema-marquee span { padding: 5px 8px; }
@@ -1007,6 +1024,88 @@ footer img {
   margin-inline: auto;
 }
 
+/* Shared project-page system */
+.clean-project-hero {
+  min-height: calc(100vh - 76px);
+  padding-top: clamp(38px, 4.5vw, 58px);
+  padding-bottom: clamp(38px, 4.5vw, 58px);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 350px);
+  gap: clamp(44px, 5vw, 72px);
+  align-items: center;
+}
+
+.clean-project-hero .teaser-copy h1 {
+  max-width: none;
+  font-size: clamp(64px, 7vw, 96px);
+  line-height: .88;
+  letter-spacing: -.07em;
+  white-space: nowrap;
+}
+
+.hell-page .clean-project-hero .teaser-copy h1,
+.crow-page .clean-project-hero .teaser-copy h1 {
+  max-width: 760px;
+  font-size: clamp(54px, 6vw, 82px);
+  line-height: .92;
+  white-space: normal;
+}
+
+.clean-project-hero .teaser-copy .lead {
+  max-width: 720px;
+  margin-top: 22px;
+  font-size: clamp(23px, 2vw, 29px);
+  line-height: 1.3;
+}
+
+.clean-project-hero .teaser-facts {
+  max-width: 720px;
+  margin-top: 24px;
+  grid-template-columns: .7fr .7fr 1.6fr;
+}
+
+.clean-project-hero .teaser-facts div { padding-top: 13px; padding-bottom: 13px; }
+.clean-project-hero .teaser-facts dt { color: #b9aa87; }
+.clean-project-hero .teaser-facts dd { font-size: 13px; }
+
+.clean-project-hero .teaser-access {
+  max-width: 720px;
+  margin-top: 22px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.clean-project-hero .teaser-access p { margin-bottom: 14px; font-size: 14px; }
+.clean-project-hero .button { padding: 13px 20px; }
+.clean-project-hero .button:first-of-type { color: #11110f; background: #ff5a1f; }
+.clean-project-hero .button:hover { color: #11110f; background: #ff5a1f; }
+
+.clean-project-hero .teaser-art {
+  min-height: 0;
+  margin-top: 0;
+  align-self: center;
+}
+
+.clean-project-hero .teaser-art::before { display: none; }
+
+.clean-project-hero .teaser-art img {
+  width: auto;
+  max-width: 100%;
+  max-height: min(66vh, 505px);
+  margin-inline: auto;
+  object-fit: contain;
+}
+
+.clean-project-hero .teaser-art-wide {
+  min-height: 0;
+}
+
+.clean-project-hero .teaser-art-wide img {
+  width: 100%;
+  max-width: 430px;
+  max-height: 52vh;
+}
+
 .forever-festival-honors {
   padding: clamp(62px, 7vw, 92px) 30px;
   border-top: 1px solid rgba(232,221,186,.14);
@@ -1122,6 +1221,32 @@ footer img {
 }
 
 @media (max-width: 850px) {
+  .clean-project-hero {
+    min-height: auto;
+    gap: 34px;
+    padding: 48px 24px 64px;
+  }
+
+  .clean-project-hero .teaser-copy h1,
+  .hell-page .clean-project-hero .teaser-copy h1,
+  .crow-page .clean-project-hero .teaser-copy h1 {
+    font-size: clamp(58px, 12vw, 88px);
+    white-space: normal;
+  }
+
+  .clean-project-hero .teaser-facts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .clean-project-hero .teaser-art img {
+    max-width: 360px;
+    max-height: none;
+  }
+
+  .clean-project-hero .teaser-art-wide img {
+    max-width: 520px;
+  }
+
   .forever-project-hero {
     min-height: auto;
     gap: 34px;
@@ -1164,6 +1289,30 @@ footer img {
 }
 
 @media (max-width: 560px) {
+  .clean-project-hero {
+    padding: 40px 20px 58px;
+  }
+
+  .clean-project-hero .teaser-copy h1,
+  .hell-page .clean-project-hero .teaser-copy h1,
+  .crow-page .clean-project-hero .teaser-copy h1 {
+    font-size: clamp(52px, 17vw, 68px);
+  }
+
+  .clean-project-hero .teaser-copy .lead {
+    font-size: 21px;
+  }
+
+  .clean-project-hero .teaser-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .clean-project-hero .teaser-access .button {
+    width: 100%;
+    margin: 0 0 10px;
+    justify-content: center;
+  }
+
   .forever-project-hero {
     padding: 40px 20px 58px;
   }
@@ -2661,4 +2810,35 @@ footer a {
   .mogul-meta dd { margin-top: 20px; }
   .mogul-career-art { min-height: 430px; }
   .mogul-step-grid article { min-height: 280px; }
+}
+
+/* Keep the shared project template compact after legacy responsive rules. */
+@media (max-width: 850px) {
+  .clean-project-hero {
+    min-height: auto;
+    padding: 48px 24px 64px;
+    gap: 34px;
+  }
+
+  .clean-project-hero .teaser-copy h1,
+  .hell-page .clean-project-hero .teaser-copy h1,
+  .crow-page .clean-project-hero .teaser-copy h1 {
+    font-size: clamp(58px, 12vw, 88px);
+    white-space: normal;
+  }
+}
+
+@media (max-width: 560px) {
+  .clean-project-hero {
+    padding: 40px 20px 58px;
+  }
+
+  .clean-project-hero .teaser-copy h1,
+  .hell-page .clean-project-hero .teaser-copy h1,
+  .crow-page .clean-project-hero .teaser-copy h1 {
+    font-size: clamp(52px, 17vw, 68px);
+  }
+
+  .clean-project-hero .teaser-copy .lead { font-size: 21px; }
+  .clean-project-hero .teaser-access { padding: 0; }
 }
