@@ -632,6 +632,57 @@ footer img {
     linear-gradient(90deg, #061109, #18351f 42%, #0a1f11 75%, #020704);
 }
 
+.forever-short-film-section {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: clamp(72px, 8vw, 110px) 30px;
+  text-align: center;
+  border-top: 1px solid rgba(232,221,186,.12);
+}
+
+.forever-short-film-heading {
+  max-width: 680px;
+  margin: 0 auto 34px;
+}
+
+.forever-short-film-heading .eyebrow { color: #b9aa87; }
+
+.forever-short-film-heading h2 {
+  margin: 8px 0 16px;
+  color: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 4.5vw, 60px);
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+
+.forever-short-film-heading > p:last-child {
+  margin: 0;
+  color: #bcb5a8;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.forever-short-player {
+  padding: 8px;
+  border: 1px solid rgba(213,193,151,.48);
+  background: #030403;
+  box-shadow: 0 28px 80px rgba(0,0,0,.42);
+}
+
+.forever-short-player iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.forever-youtube-link {
+  display: inline-block;
+  margin-top: 22px;
+}
+
 @media (max-width: 560px) {
   :is(.crow-cinema-section, .forever-cinema-section, .hell-cinema-section) { padding: 58px 14px 84px; }
   :is(.crow-cinema-section, .forever-cinema-section, .hell-cinema-section) h2 { margin-bottom: 28px; }
@@ -640,6 +691,8 @@ footer img {
   .cinema-marquee span { padding: 5px 8px; }
   .cinema-stage { grid-template-columns: 13px minmax(0, 1fr) 13px; }
   .cinema-screen { padding: 3px; border-width: 4px; }
+  .forever-short-film-section { padding: 58px 14px 72px; }
+  .forever-short-film-heading { margin-bottom: 26px; }
 }
 
 .card-strings {
