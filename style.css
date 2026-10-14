@@ -515,9 +515,9 @@ footer img {
   position: absolute;
   inset: 8px 10px 48px;
   z-index: 0;
-  background: url("assets/finding-loren/finding-loren-thumbnail.png") center 38% / contain no-repeat;
-  opacity: .9;
-  filter: saturate(.82) contrast(1.03);
+  background: url("assets/finding-loren/stephen-and-dad.jpg") center 42% / cover no-repeat;
+  opacity: .92;
+  filter: sepia(.12) saturate(.82) contrast(1.04);
   -webkit-mask-image: radial-gradient(ellipse 78% 82% at 50% 42%, #000 54%, transparent 100%);
   mask-image: radial-gradient(ellipse 78% 82% at 50% 42%, #000 54%, transparent 100%);
 }
@@ -2496,7 +2496,27 @@ footer img {
 .loren-page .teaser-art-poster img {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-height: min(66vh, 540px);
+  object-fit: contain;
   filter: sepia(.08) saturate(.88) contrast(1.04) drop-shadow(0 28px 42px rgba(0,0,0,.55));
+}
+
+.loren-family-photo {
+  margin: 0;
+  position: relative;
+}
+
+.loren-family-photo figcaption {
+  margin-top: 12px;
+  position: relative;
+  z-index: 3;
+  color: #a9926e;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 9px;
+  font-weight: 800;
 }
 
 .loren-hero {
