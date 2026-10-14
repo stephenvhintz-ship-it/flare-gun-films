@@ -502,11 +502,37 @@ footer img {
 }
 
 .card-loren {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background:
-    linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.94)),
-    radial-gradient(circle at 50% 28%, rgba(213,167,95,.18), transparent 48%),
-    url("assets/finding-loren/finding-loren-thumbnail.png") center 34% / contain no-repeat,
+    radial-gradient(circle at 50% 28%, rgba(213,167,95,.2), transparent 52%),
     #070707;
+}
+
+.card-loren::before {
+  content: "";
+  position: absolute;
+  inset: 8px 10px 48px;
+  z-index: 0;
+  background: url("assets/finding-loren/finding-loren-thumbnail.png") center 38% / contain no-repeat;
+  opacity: .9;
+  filter: saturate(.82) contrast(1.03);
+  -webkit-mask-image: radial-gradient(ellipse 78% 82% at 50% 42%, #000 54%, transparent 100%);
+  mask-image: radial-gradient(ellipse 78% 82% at 50% 42%, #000 54%, transparent 100%);
+}
+
+.card-loren::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 25%, rgba(7,7,7,.16) 48%, #070707 88%);
+}
+
+.card-loren > * {
+  position: relative;
+  z-index: 2;
 }
 
 :is(.crow-cinema-section, .forever-cinema-section, .hell-cinema-section) {
@@ -2449,6 +2475,29 @@ footer img {
 .loren-page .text-link:hover { color: var(--loren-gold); }
 .loren-button { border-color: var(--loren-gold); color: var(--loren-gold); }
 .loren-button:hover { background: var(--loren-gold); color: #070604; }
+
+.loren-page .teaser-art-poster {
+  position: relative;
+  padding: clamp(10px, 2vw, 24px);
+  background: radial-gradient(ellipse at 50% 45%, rgba(213,167,95,.2), transparent 68%);
+}
+
+.loren-page .teaser-art-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, #070604 0%, rgba(7,6,4,.84) 8%, transparent 25%, transparent 75%, rgba(7,6,4,.84) 92%, #070604 100%),
+    linear-gradient(180deg, #070604 0%, rgba(7,6,4,.76) 8%, transparent 20%, transparent 78%, rgba(7,6,4,.88) 92%, #070604 100%);
+}
+
+.loren-page .teaser-art-poster img {
+  position: relative;
+  z-index: 1;
+  filter: sepia(.08) saturate(.88) contrast(1.04) drop-shadow(0 28px 42px rgba(0,0,0,.55));
+}
 
 .loren-hero {
   min-height: calc(100vh - 76px);
