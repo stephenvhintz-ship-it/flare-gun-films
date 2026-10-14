@@ -258,6 +258,17 @@ h2 {
   text-transform: uppercase;
 }
 
+.card .card-hook {
+  margin: 14px 0 0;
+  color: #d8cfc3;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.45;
+  text-transform: none;
+}
+
 .split {
   max-width: 1220px;
   margin: 0 auto;
@@ -2808,6 +2819,11 @@ footer a {
   line-height: 1.5;
 }
 
+.form-assurance {
+  display: grid;
+  gap: 5px;
+}
+
 .thanks-panel {
   width: min(840px, calc(100% - 48px));
   min-height: calc(100vh - 76px);
@@ -2859,6 +2875,24 @@ footer a {
 }
 
 @media (max-width: 850px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero .eyebrow {
+    max-width: 330px;
+    letter-spacing: 3px;
+    line-height: 1.7;
+  }
+
+  .teaser-shell,
+  .clean-project-hero,
+  .forever-project-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .nav {
     padding: 12px 18px;
   }
@@ -2950,9 +2984,18 @@ footer a {
 }
 
 @media (max-width: 560px) {
-  .nav { padding-inline: 16px; }
+  .nav { height: 68px; padding-inline: 14px; }
+  .brand img { height: 40px; }
   .nav nav { gap: 10px; }
-  .nav nav a { font-size: 9px; }
+  .nav nav a { letter-spacing: .5px; font-size: 9px; }
+  .forever-tree-page .nav nav a:nth-child(3),
+  .crow-page .nav nav a:nth-child(3),
+  .sidd-page .nav nav a:nth-child(3),
+  .hell-page .nav nav a:nth-child(3) { display: inline; }
+  .hero { min-height: calc(100svh - 68px); padding-inline: 18px; }
+  .hero-logo-crop { width: min(300px, 80vw); }
+  .hero h1 { font-size: clamp(29px, 9vw, 42px); }
+  .hero .eyebrow { max-width: 310px; letter-spacing: 2.4px; font-size: 10px; }
   .footer-legal { display: block; text-align: center; }
   .footer-legal .submission-note { margin-top: 10px; text-align: center; }
   .inquiry-shell { padding-inline: 20px; }
@@ -3053,4 +3096,9 @@ footer a {
 
   .clean-project-hero .teaser-copy .lead { font-size: 21px; }
   .clean-project-hero .teaser-access { padding: 0; }
+
+  .forever-tree-page .nav nav a:nth-child(3),
+  .crow-page .nav nav a:nth-child(3),
+  .sidd-page .nav nav a:nth-child(3),
+  .hell-page .nav nav a:nth-child(3) { display: inline; }
 }
