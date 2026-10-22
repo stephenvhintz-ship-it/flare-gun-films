@@ -3329,3 +3329,8 @@ footer a {
 @media (max-width: 760px) {
   .loren-history-grid { grid-template-columns: 1fr; }
 }
+.loren-coverage .loren-cnn-coverage { grid-column: 1 / -1; border-color: #a73c30; }
+.loren-news-logo { display: block; width: 100px; height: 48px; object-fit: contain; margin-bottom: 24px; }
+.loren-cnn-coverage h3 { max-width: 850px; font-size: clamp(28px, 3vw, 40px); }
+.loren-cnn-coverage p { max-width: 850px; }
+.loren-cnn-coverage .loren-news-byline { font-size: 13px; margin: 22px 0; }
