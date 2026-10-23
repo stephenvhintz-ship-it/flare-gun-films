@@ -9,41 +9,64 @@
   <meta property="og:description" content="Independent film, true stories, and literary adaptation from writer-producer Stephen Hintz." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.flaregunfilms.com/" />
-  <meta property="og:image" content="https://www.flaregunfilms.com/assets/brand/flare-gun-films-logo.png" />
+  <meta property="og:image" content="https://www.flaregunfilms.com/assets/share/home.jpg" />
   <meta property="og:image:alt" content="Flare Gun Films" />
   <meta property="og:site_name" content="Flare Gun Films" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Flare Gun Films | Stories That Find You" />
   <meta name="twitter:description" content="Independent film, true stories, and literary adaptation from writer-producer Stephen Hintz." />
-  <meta name="twitter:image" content="https://www.flaregunfilms.com/assets/brand/flare-gun-films-logo.png" />
+  <meta name="twitter:image" content="https://www.flaregunfilms.com/assets/share/home.jpg" />
   <link rel="canonical" href="https://www.flaregunfilms.com/" />
   <title>Flare Gun Films | Stories That Find You</title>
-  <link rel="stylesheet" href="style.css?v=2026-10-14-loren-family-photo" />
+  <link rel="stylesheet" href="style.css?v=2026-10-23-professional" />
+  <link rel="icon" type="image/png" href="assets/brand/favicon.png">
+  <link rel="stylesheet" href="/polish.css?v=2026-10-23">
 </head>
 
-<body>
+<body class="home-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="nav">
     <a class="brand" href="/" aria-label="Flare Gun Films &mdash; home">
-      <img src="assets/brand/flare-gun-films-logo.png" alt="" aria-hidden="true" />
+      <img width="1080" height="1080" src="assets/brand/flare-gun-films-logo.png" alt="" aria-hidden="true" />
     </a>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main-content" tabindex="-1">
+    <section class="hero editorial-hero" aria-labelledby="home-title">
       <div class="hero-inner">
-        <span class="hero-logo-crop">
-          <img class="hero-logo" src="assets/brand/flare-gun-films-logo.png" alt="Flare Gun Films" />
-        </span>
-        <h1>Stories That Find You.</h1>
+        <p class="eyebrow">Independent film &amp; television</p>
+        <h1 id="home-title">Stories That<br>Find You.</h1>
+        <p class="hero-text">True stories. Literary adaptations. Original voices.<br>Film and television from writer-producer Stephen Hintz.</p>
         <p class="hero-credit">From the co-writer of <em>The Hill</em></p>
-        <p class="eyebrow">Independent Film &bull; True Stories &bull; Literary Adaptation</p>
-        <a class="button" href="#projects">View the Slate</a>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore the Slate</a><a class="button" href="industry-inquiry.html">Industry Inquiries</a></div>
+      </div>
+      <figure class="hero-feature"><img width="1080" height="1350" src="assets/forever-tree/poster.jpg" alt="Artwork for The Forever Tree" fetchpriority="high"><figcaption><span>From our work</span><a href="forever-tree.html">The Forever Tree <span aria-hidden="true">&rarr;</span></a><small>The 2017 short. A new feature and series in development.</small></figcaption></figure>
+    </section>
+
+    <section id="selected-work" class="selected-work" aria-labelledby="selected-work-title">
+      <div class="selected-work-heading">
+        <p class="eyebrow">Selected Work</p>
+        <h2 id="selected-work-title">Selected Credits</h2>
+      </div>
+      <div class="work-strip">
+        <article class="work-title work-title-hill">
+          <div class="work-art"><img width="2560" height="3616" src="assets/credits/the-hill-poster-full-1280.webp" srcset="assets/credits/the-hill-poster-full-640.webp 640w, assets/credits/the-hill-poster-full-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 50vw" alt="The Hill film poster" loading="lazy"></div>
+          <div class="work-caption"><h3>The Hill <span>(2023)</span></h3><p><strong>Screenplay</strong><small>dir. Jeff Celentano &bull; Briarcliff Entertainment &bull; with Dennis Quaid</small></p></div>
+        </article>
+        <article class="work-title">
+          <div class="work-art"><img width="1000" height="1297" src="Battlecreek.jpg" alt="Battlecreek film artwork" loading="lazy"></div>
+          <div class="work-caption"><h3>Battlecreek <span>(2017)</span></h3><p><strong>Executive Producer</strong><small>dir. Alison Eastwood &bull; with Bill Skarsg&aring;rd and Delroy Lindo</small></p></div>
+        </article>
+        <article class="work-title">
+          <div class="work-art"><img width="1080" height="1350" src="assets/forever-tree/poster.jpg" alt="The Forever Tree artwork" loading="lazy"></div>
+          <div class="work-caption"><h3>The Forever Tree <span>(2017)</span></h3><p><strong>Co-writer</strong><small>dir. Alrick Brown &bull; Bentonville Film Festival</small></p></div>
+        </article>
       </div>
     </section>
 
@@ -51,21 +74,21 @@
       <p class="eyebrow">In Development</p>
       <h2>The Slate</h2>
       <p class="section-note">
-        Six screen projects in development. Five begin with something that actually happened.
+        Six projects exploring overlooked histories, complicated families, and lives that resist easy explanation.
       </p>
 
       <div class="grid">
-        <a class="card-link" href="strings.html"><article class="card card-strings"><p>True Crime Feature</p><h3>Strings</h3><p class="card-hook">A stolen Stradivarius turns one man&rsquo;s fantasy of escape into a tightening criminal trap.</p><span>View Project &rarr;</span></article></a>
+        <a class="card-link" href="strings.html" aria-label="Strings — view project"><article class="card card-strings"><p>True Crime Feature</p><h3>Strings</h3><p class="card-hook">A stolen Stradivarius turns one man&rsquo;s fantasy of escape into a tightening criminal trap.</p><span>View Project &rarr;</span></article></a>
 
-        <a class="card-link" href="finding-loren.html"><article class="card card-loren"><p>Historical Family Feature</p><h3>Finding Loren</h3><p class="card-hook">A lost WWII pilot. A discovery in Italy. A father and son facing everything they still need to say.</p><span>View Project &rarr;</span></article></a>
+        <a class="card-link" href="finding-loren.html" aria-label="Finding Loren — view project"><article class="card card-loren"><p>Historical Family Feature</p><h3>Finding Loren</h3><p class="card-hook">A lost WWII pilot. A discovery in Italy. A father and son facing everything they still need to say.</p><span>View Project &rarr;</span></article></a>
 
-        <a class="card-link" href="forever-tree.html"><article class="card card-forever"><p>Feature Film, Television Series &amp; Publishing</p><h3>Forever Tree</h3><p class="card-hook">Two friends uncover a mystery linking hidden history, family legacy, and the unexplained.</p><span>View Project &rarr;</span></article></a>
+        <a class="card-link" href="forever-tree.html" aria-label="Forever Tree — view project"><article class="card card-forever"><p>Feature Film, Television Series &amp; Publishing</p><h3>Forever Tree</h3><p class="card-hook">Two friends uncover a mystery linking hidden history, family legacy, and the unexplained.</p><span>View Project &rarr;</span></article></a>
 
-        <a class="card-link" href="40-minutes-of-hell.html"><article class="card card-hell"><p>Biographical Sports Feature</p><h3>40 Minutes of Hell</h3><p class="card-hook">Nolan Richardson battles prejudice and tragedy to revolutionize basketball and reach its summit.</p><span>View Project &rarr;</span></article></a>
+        <a class="card-link" href="40-minutes-of-hell.html" aria-label="40 Minutes of Hell — view project"><article class="card card-hell"><p>Biographical Sports Feature</p><h3>40 Minutes of Hell</h3><p class="card-hook">Nolan Richardson battles prejudice and tragedy to revolutionize basketball and reach its summit.</p><span>View Project &rarr;</span></article></a>
 
-        <a class="card-link" href="sidd.html"><article class="card card-sidd"><p>Dramatic Feature</p><h3>Sidd</h3><p class="card-hook">An heir abandons privilege in search of enlightenment and discovers freedom through surrender.</p><span>View Project &rarr;</span></article></a>
+        <a class="card-link" href="sidd.html" aria-label="Sidd — view project"><article class="card card-sidd"><p>Dramatic Feature</p><h3>Sidd</h3><p class="card-hook">An heir abandons privilege in search of enlightenment and discovers freedom through surrender.</p><span>View Project &rarr;</span></article></a>
 
-        <a class="card-link" href="3-days-as-the-crow-flies.html"><article class="card card-crow"><p>Animated Feature Adaptation</p><h3>3 Days as the Crow Flies</h3><p class="card-hook">A dropout steals an artist&rsquo;s identity and stumbles into an unexpected chance at redemption.</p><span>View Project &rarr;</span></article></a>
+        <a class="card-link" href="3-days-as-the-crow-flies.html" aria-label="3 Days as the Crow Flies — view project"><article class="card card-crow"><p>Animated Feature Adaptation</p><h3>3 Days as the Crow Flies</h3><p class="card-hook">A dropout steals an artist&rsquo;s identity and stumbles into an unexpected chance at redemption.</p><span>View Project &rarr;</span></article></a>
 
       </div>
       <p class="slate-access">Screenplays, decks, and package details available to industry on request.</p>
@@ -74,11 +97,11 @@
     <section id="about" class="split">
       <div>
         <p class="eyebrow">About</p>
-        <h2>Flare Gun Films</h2>
+        <h2>A story begins<br>with a person.</h2><figure class="founder-photo"><img width="640" height="480" src="assets/finding-loren/stephen-and-martin-640.webp" alt="Stephen Hintz and his father Martin" loading="lazy"><figcaption>Stephen with his father Martin. Their story inspired <em>Finding Loren</em>.</figcaption></figure>
       </div>
       <div>
         <p>
-          Flare Gun Films is an independent production company founded by writer-producer Stephen Hintz.
+          Flare Gun Films is an independent production company founded by Stephen Hintz, co-writer of <em>The Hill</em> and executive producer of <em>Battlecreek</em>.
         </p>
         <p>
           Before he wrote screenplays, Stephen ran a social service agency in Milwaukee, working with kids and families. His work is still driven by a fascination with character, family, and people from every walk of life&mdash;especially those with something unexpected to say.
@@ -94,28 +117,10 @@
       </div>
     </section>
 
-    <section id="selected-work" class="selected-work" aria-labelledby="selected-work-title">
-      <div class="selected-work-heading">
-        <p class="eyebrow">Selected Work</p>
-        <h2 id="selected-work-title">Selected Credits</h2>
-      </div>
-      <div class="work-strip">
-        <article class="work-title work-title-hill">
-          <div class="work-art"><img src="assets/credits/the-hill-poster-full.jpg" alt="The Hill film poster"></div>
-          <div class="work-caption"><h3>The Hill <span>(2023)</span></h3><p><strong>Screenplay</strong><small>dir. Jeff Celentano &bull; Briarcliff Entertainment &bull; with Dennis Quaid</small></p></div>
-        </article>
-        <article class="work-title">
-          <div class="work-art"><img src="Battlecreek.jpg" alt="Battlecreek film artwork"></div>
-          <div class="work-caption"><h3>Battlecreek <span>(2017)</span></h3><p><strong>Executive Producer</strong><small>dir. Alison Eastwood &bull; with Bill Skarsg&aring;rd and Delroy Lindo</small></p></div>
-        </article>
-        <article class="work-title">
-          <div class="work-art"><img src="assets/forever-tree/poster.jpg" alt="The Forever Tree artwork"></div>
-          <div class="work-caption"><h3>The Forever Tree <span>(2017)</span></h3><p><strong>Co-writer</strong><small>dir. Alrick Brown &bull; Bentonville Film Festival</small></p></div>
-        </article>
-      </div>
-    </section>
 
-    <section class="contact-panel">
+
+    <section class="section press-section" aria-labelledby="recognition-title"><p class="eyebrow">Stories with a life beyond the screen</p><h2 id="recognition-title">Recognition &amp; coverage</h2><div class="recognition-grid"><a href="forever-tree.html#festival-selections-title"><span>Festival selections</span><h3>The Forever Tree</h3><p>Bentonville, Milwaukee, and San Francisco Black Film Festivals &middot; 2017</p><span>Explore the film &rarr;</span></a><a href="finding-loren.html#coverage-heading"><span>Documented history</span><h3>Finding Loren</h3><p>The family story covered by CNN and The National WWII Museum.</p><span>Read the coverage &rarr;</span></a></div></section>
+    <section id="contact" class="contact-panel">
       <h2>Contact</h2>
       <p>Flare Gun Films works with producers, financiers, representatives, talent, sales agents, distributors, and press.</p>
       <div class="contact-actions">
@@ -125,18 +130,18 @@
     </section>
   </main>
 
-  <footer id="contact">
-    <img src="assets/brand/flare-gun-films-logo.png" alt="" aria-hidden="true" />
+  <footer>
+    <img width="1080" height="1080" src="assets/brand/flare-gun-films-logo.png" alt="" aria-hidden="true" />
     <p>Film &bull; Television &bull; Publishing</p>
     <p>Springdale &bull; Los Angeles &bull; New York City</p>
     <a href="mailto:info@flaregunfilms.com">info@flaregunfilms.com</a>
     <div class="social-links" aria-label="Flare Gun Films social media">
       <a href="https://www.instagram.com/flaregunfilms/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="https://www.linkedin.com/company/flaregun-films" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="movie-mogul.html">Interactive Lab</a>
+
     </div>
     <div class="footer-legal">
-      <p class="copyright">&copy; 2026 Flare Gun Films</p>
+      <a class="lab-link" href="movie-mogul.html">Interactive Lab &rarr;</a><p class="copyright">&copy; 2026 Flare Gun Films</p>
       <p class="submission-note">Flare Gun Films does not accept unsolicited scripts, treatments, concepts, or other creative materials. Anything sent unsolicited will not be read or returned.</p>
     </div>
   </footer>
