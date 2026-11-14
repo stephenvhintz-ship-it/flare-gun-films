@@ -19,6 +19,95 @@
   <link rel="stylesheet" href="style.css?v=2026-10-23-professional">
   <link rel="icon" type="image/png" href="assets/brand/favicon.png">
   <link rel="stylesheet" href="/polish.css?v=2026-10-23-mobile">
+  <style>
+    .crow-page .clean-project-hero .crow-facts {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .crow-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 18px;
+    }
+
+    .crow-page .crow-actions .button {
+      margin: 0;
+    }
+
+    .crow-page .crow-actions .crow-button {
+      background: var(--crow-blue);
+      color: #05070b;
+    }
+
+    .crow-page .crow-actions .crow-button:hover {
+      background: #a6e4fc;
+    }
+
+    .crow-trailer-credit {
+      margin: 20px auto 0;
+      color: #c3c9d2;
+      font-size: .875rem;
+      line-height: 1.6;
+    }
+
+    .crow-source {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: start;
+      gap: clamp(24px, 5vw, 72px);
+      max-width: 1120px;
+      margin-inline: auto;
+      padding: clamp(40px, 7vw, 80px) clamp(24px, 5vw, 56px);
+      border-top: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    .crow-source h2 {
+      margin: 0 0 16px;
+      color: var(--crow-cream);
+      font: 400 clamp(1.8rem, 4vw, 2.5rem)/1.12 Georgia, serif;
+    }
+
+    .crow-source-copy p {
+      margin: 0 0 10px;
+      color: #c3c9d2;
+      line-height: 1.6;
+    }
+
+    .crow-source .novel-review {
+      margin: 0;
+      padding: 4px 0 4px 20px;
+      border-left: 2px solid var(--crow-blue);
+    }
+
+    .crow-source blockquote,
+    .crow-source blockquote p {
+      margin: 0;
+    }
+
+    .crow-source blockquote p {
+      color: var(--crow-cream);
+      font: italic 400 clamp(1.4rem, 3vw, 2rem)/1.3 Georgia, serif;
+    }
+
+    .crow-source figcaption {
+      margin-top: 12px;
+      color: #c3c9d2;
+      font-size: .875rem;
+    }
+
+    @media (max-width: 600px) {
+      .crow-source {
+        grid-template-columns: 1fr;
+      }
+
+      .crow-page .crow-facts div + div {
+        padding-left: 14px;
+        border-top: 0;
+        border-left: 1px solid rgba(255, 255, 255, .14);
+      }
+    }
+  </style>
 </head>
 <body class="project-page teaser-page crow-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -36,21 +125,15 @@
       <section class="teaser-copy">
         <p class="eyebrow">Animated/Live Action Feature</p>
         <h1>3 Days as the Crow Flies</h1>
-        <p><strong>Based on the novel <em>Three Days as the Crow Flies</em> by Danny Simmons, Jr.</strong></p>
-        <figure class="novel-review">
-          <blockquote cite="https://www.simonandschuster.com/books/Three-Days-As-the-Crow-Flies/Danny-Simmons/9780743466417">
-            <p>&ldquo;A fond tribute to the naughty fun of the good old days.&rdquo;</p>
-          </blockquote>
-          <figcaption><a class="text-link" href="https://www.simonandschuster.com/books/Three-Days-As-the-Crow-Flies/Danny-Simmons/9780743466417">The New York Times Book Review</a> on the novel</figcaption>
-        </figure>
-        <p>Floyd Hughes illustrated <em>&rsquo;85</em>, a separate graphic novel adaptation of the book.</p>
         <p class="lead">A drug addicted college dropout steals an artist&rsquo;s work and spends three remarkable days living as the man he pretends to be, beginning an unexpected journey toward redemption.</p>
-        <dl class="teaser-facts"><div><dt>Format</dt><dd>Animated/live action feature adaptation</dd></div><div><dt>Stage</dt><dd>In development</dd></div><div><dt>Setting</dt><dd>1980s New York</dd></div></dl>
+        <dl class="teaser-facts crow-facts"><div><dt>Stage</dt><dd>In development</dd></div><div><dt>Setting</dt><dd>1980s New York</dd></div></dl>
         <div class="teaser-access">
           <p>Screenplay, deck, and package details available to industry on request.</p>
-          <a class="button crow-button" href="#trailer">Watch Trailer</a>
-          <a class="button" href="industry-inquiry.html?project=3%20Days%20as%20the%20Crow%20Flies">Request Materials</a>
-          <a class="text-link" href="index.html#projects">Back to the Slate</a>
+          <div class="crow-actions">
+            <a class="button crow-button" href="#trailer">Watch Trailer</a>
+            <a class="button" href="industry-inquiry.html?project=3%20Days%20as%20the%20Crow%20Flies">Request Materials</a>
+            <a class="text-link" href="index.html#projects">Back to the Slate</a>
+          </div>
         </div>
       </section>
       <aside class="teaser-art teaser-art-poster">
@@ -61,7 +144,6 @@
     <section id="trailer" class="crow-cinema-section" aria-labelledby="crow-trailer-title">
       <p class="eyebrow">Now Showing</p>
       <h2 id="crow-trailer-title">Official Trailer</h2>
-      <p>Trailer artwork, storyboards, and animation by <a href="https://darvideo.tv/">Darvideo Animation Studio</a>.</p>
       <div class="cinema-theater crow-theater" aria-label="3 Days as the Crow Flies trailer theater">
         <div class="cinema-marquee"><span>3 Days as the Crow Flies</span></div>
         <div class="cinema-stage">
@@ -75,6 +157,21 @@
           <div class="cinema-curtain cinema-curtain-right" aria-hidden="true"></div>
         </div>
       </div>
+      <p class="crow-trailer-credit">Trailer artwork, storyboards, and animation by <a class="text-link" href="https://darvideo.tv/">Darvideo Animation Studio</a>.</p>
+    </section>
+
+    <section class="crow-source" aria-labelledby="crow-source-title">
+      <div class="crow-source-copy">
+        <h2 id="crow-source-title">The Source Novel</h2>
+        <p>Based on the novel <em>Three Days as the Crow Flies</em> by Danny Simmons, Jr.</p>
+        <p>Floyd Hughes illustrated <em>&rsquo;85</em>, a separate graphic novel adaptation of the book.</p>
+      </div>
+      <figure class="novel-review">
+        <blockquote cite="https://www.simonandschuster.com/books/Three-Days-As-the-Crow-Flies/Danny-Simmons/9780743466417">
+          <p>&ldquo;A fond tribute to the naughty fun of the good old days.&rdquo;</p>
+        </blockquote>
+        <figcaption><a class="text-link" href="https://www.simonandschuster.com/books/Three-Days-As-the-Crow-Flies/Danny-Simmons/9780743466417">The New York Times Book Review</a> on the novel</figcaption>
+      </figure>
     </section>
   </main>
 
